@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import { registrarSesion } from './services/appscript';
+import { getOrCreateSessionId } from './utils/session';
+import { captureUTMs, getLandingContext } from './utils/utm';
+import './styles/index.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  useEffect(() => {
+    const id_sesion = getOrCreateSessionId();
+    const utms = captureUTMs();
+    const ctx  = getLandingContext();
+    registrarSesion({
+      id_sesion,
+      fecha_visita: new Date().toLocaleString('es-AR'),
+      ...ctx, ...utms
+    }).catch(() => {});
+  }, []);
+
+  return (<><Header /><Main /><Footer /></>);
 }
-
-export default App;

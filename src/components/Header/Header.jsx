@@ -1,16 +1,48 @@
+import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
 import GreenLineLogo from "../../assets/img/GreenLine-1.webp";
 import "../Header/_header.scss";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => setOpen(!open);
+
   return (
     <header>
       <nav aria-label="principal" className="navbar">
         <img src={GreenLineLogo} alt="Greenline Logo" />
-        <RxHamburgerMenu
-          style={{ color: "#7ebc00", fontSize: "2rem", cursor: "pointer" }}
-        />
+        {open ? (
+          <RxCross2
+            onClick={toggleMenu}
+            style={{ color: "#7ebc00", fontSize: "2rem", cursor: "pointer" }}
+          />
+        ) : (
+          <RxHamburgerMenu
+            onClick={toggleMenu}
+            style={{ color: "#7ebc00", fontSize: "2rem", cursor: "pointer" }}
+          />
+        )}
       </nav>
+
+      {/* Overlay negro */}
+      <div className={`overlay ${open ? "overlay--active" : ""}`}>
+        <ul className="overlay__menu">
+          <li>
+            <a href="#inicio">Inicio</a>
+          </li>
+          <li>
+            <a href="#greenline">Greenline</a>
+          </li>
+          <li>
+            <a href="#productos">Productos</a>
+          </li>
+          <li>
+            <a href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }

@@ -1,6 +1,6 @@
 .hero {
   height: 100dvh;
-  width: 100%;
+  width: auto;
   background-image: url("../../assets/img/hero-mobile.webp");
   background-size: cover;
   background-position: center;
@@ -9,28 +9,28 @@
   position: relative;
   color: #fff;
   text-align: center;
-  padding-top: 0 !important;
-  justify-content: flex-start; // alinear horizontalmente a la izquierda
-  align-items: flex-end; // empuja el contenido hacia abajo
-  padding-left: 2rem; // separa del borde izquierdo
+  padding: 1px !important;
+  justify-content: flex-start;
+  align-items: flex-end;
 
-  /* contraste */
-  &__overlay {
-    padding: 2rem;
+  &__info {
+    padding: 5rem 2rem 1rem 2rem;
+    max-width: 400px;
   }
 
   &__title {
     color: #f0f1f0;
     text-align: left;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-weight: 900;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
   }
 
   &__subtitle {
     color: #f0f1f0;
     text-align: left;
+    line-height: 1.3rem;
     font-size: 1rem;
-    max-width: 320px;
   }
 
   @media (min-width: 768px) {
@@ -39,8 +39,8 @@
     }
 
     &__subtitle {
-      font-size: 1.125rem;
-      max-width: 400px;
+      font-size: 3rem !important;
+      max-width: 600px;
     }
   }
 

@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import Header from "./components/Header/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer/Footer";
-import { registrarSesion } from "./services/appscript";
-import { getOrCreateSessionId } from "./utils/session";
-import { captureUTMs, getLandingContext } from "./utils/utm";
+import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
+import { registrarSesion } from "../services/appscript";
+import { getOrCreateSessionId } from "../utils/session";
+import { captureUTMs, getLandingContext } from "../utils/utm";
 import "./styles/index.scss";
 
 export default function App() {

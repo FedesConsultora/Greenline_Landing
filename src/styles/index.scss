@@ -45,6 +45,7 @@ header {
   top: 0;
   border-bottom: 1px solid #eee;
   z-index: 10;
+  background-color: rgba(249, 246, 255, 0.1);
 }
 footer {
   border-top: 1px solid #eee;
@@ -54,12 +55,12 @@ footer {
 
 /* Tipografía base */
 h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.1;
   margin: 1.2rem 0;
 }
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin: 1rem 0;
 }
 

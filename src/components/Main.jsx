@@ -4,9 +4,7 @@ import Productos from "./Products/Productos";
 export default function Main() {
   return (
     <main>
-      <section className="hero">
-        <Hero />
-      </section>
+      <Hero />
 
       <section>
         <Productos />

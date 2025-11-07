@@ -1,12 +1,16 @@
+import { RxHamburgerMenu } from "react-icons/rx";
+import GreenLineLogo from "../../assets/img/GreenLine-1.webp";
+import "../Header/_header.scss";
+
 export default function Header() {
   return (
     <header>
-      <div className="container" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0.75rem 0' }}>
-        <div style={{ fontWeight:800, fontSize:'1.2rem' }}>Greenline</div>
-        <nav aria-label="principal">
-          {/* Menú futuro si hace falta */}
-        </nav>
-      </div>
+      <nav aria-label="principal" className="navbar">
+        <img src={GreenLineLogo} alt="Greenline Logo" />
+        <RxHamburgerMenu
+          style={{ color: "#7ebc00", fontSize: "2rem", cursor: "pointer" }}
+        />
+      </nav>
     </header>
   );
 }

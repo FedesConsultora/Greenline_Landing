@@ -1,0 +1,50 @@
+.hero {
+  height: 100dvh;
+  width: 100%;
+  background-image: url("../../assets/img/hero-mobile.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding-top: 0 !important;
+  justify-content: flex-start; // alinear horizontalmente a la izquierda
+  align-items: flex-end; // empuja el contenido hacia abajo
+  padding-left: 2rem; // separa del borde izquierdo
+
+  /* contraste */
+  &__overlay {
+    padding: 2rem;
+  }
+
+  &__title {
+    color: #f0f1f0;
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    color: #f0f1f0;
+    text-align: left;
+    font-size: 1rem;
+    max-width: 320px;
+  }
+
+  @media (min-width: 768px) {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+      max-width: 400px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    background-attachment: fixed;
+  }
+}

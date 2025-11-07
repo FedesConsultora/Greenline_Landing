@@ -1,15 +1,23 @@
-import React from "react";
+import "../Hero/_hero.scss";
 
 export default function Hero() {
   return (
     <>
-      <div>
-        <h1>El cuidado también puede ser natural</h1>
-        <span>
-          Un gato o un perro son más que compañeros:{" "}
-          <strong>son nuestra familia</strong>
-        </span>
-      </div>
+      <section className="hero">
+        <div className="hero__overlay">
+          <h1 className="hero__title">
+            El cuidado
+            <br />
+            también puede
+            <br />
+            ser natural.
+          </h1>
+          <p className="hero__subtitle">
+            Un perro o un gato son más que
+            <br /> compañeros: son nuestra familia.
+          </p>
+        </div>
+      </section>
     </>
   );
 }

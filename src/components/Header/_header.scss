@@ -1,0 +1,18 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgba(249, 246, 255, 0.1) !important;
+  color: rgba(249, 246, 255, 0.1) !important;
+  height: 74px;
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+  img {
+    cursor: pointer;
+  }
+}

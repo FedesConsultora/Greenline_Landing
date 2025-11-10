@@ -1,5 +1,4 @@
 import { openWhatsappAndLog } from "../../utils/wa";
-
 import "../Products/_productos.scss";
 const WA_TUTOR = process.env.REACT_APP_WA_TUTOR || "";
 

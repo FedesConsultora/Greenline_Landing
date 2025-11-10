@@ -3,7 +3,6 @@
 header {
   position: relative;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .navbar {
@@ -15,13 +14,14 @@ header {
   height: 74px;
   display: flex;
   align-items: center;
+
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 2000;
-  transition: transform 0.35s ease-in-out, opacity 0.25s ease;
+  transition: transform 0.45s ease-in-out, opacity 0.25s ease;
   will-change: transform, opacity;
 
   img {

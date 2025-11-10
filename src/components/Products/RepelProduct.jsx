@@ -67,7 +67,7 @@ export default function RepelProduct() {
 
   return (
     <section>
-      <div className="repel_main">
+      <div className="repel__main">
         <img src={RepelLogo} alt="" />
         <img src={Repel} alt="" />
         <h1>Protección natural contra insectos molestos.</h1>

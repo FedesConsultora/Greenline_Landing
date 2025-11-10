@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GreenlineProbiotics from "../../assets/img/Green Line PROBIOTICS 1.png";
 import Probiotics from "../../assets/img/Group-2.webp";
+import "./_probioticProduct.scss";
 
 export default function ProbioticProduct() {
   const [activeSection, setActiveSection] = useState("ventajas");
@@ -44,15 +45,17 @@ export default function ProbioticProduct() {
   return (
     <section>
       <div className="probiotics__main">
-        <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
-        <img src={Probiotics} alt="" />
-        <h1>Lo que no ves, también importa</h1>
-        <h2>
-          La microbiota intestinal es un ecosistema vivo: millones de bacterias
-          buenas trabajan en armonía para proteger el organismo, mejorar la
-          absorción de nutrientes y fortalecer las defensas. Cuidarla es
-          acompañar su bienestar
-        </h2>
+        <div className="probiotics-presentation">
+          <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
+          <img src={Probiotics} alt="" />
+          <h1>Lo que no ves, también importa</h1>
+          <h2>
+            La microbiota intestinal es un ecosistema vivo: millones de
+            bacterias buenas trabajan en armonía para proteger el organismo,
+            mejorar la absorción de nutrientes y fortalecer las defensas.
+            Cuidarla es acompañar su bienestar
+          </h2>
+        </div>
 
         <div className="probiotics-divider">
           Su bienestar empieza por dentro
@@ -69,7 +72,6 @@ export default function ProbioticProduct() {
           ))}
         </div>
 
-        {/* Sección dinámica */}
         <div className="probiotics-dynamic-section">
           <h1>{sections[activeSection].title}</h1>
           {sections[activeSection].content}

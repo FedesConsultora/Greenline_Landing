@@ -7,6 +7,7 @@ header {
 
 .navbar {
   position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -14,11 +15,10 @@ header {
   height: 74px;
   display: flex;
   align-items: center;
-
   justify-content: space-between;
   padding: 1rem 1rem 1rem 2rem;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); //eliminar cuando se scrollea hacia abajo
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 2000;
   transition: transform 0.45s ease-in-out, opacity 0.25s ease;

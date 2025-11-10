@@ -6,17 +6,19 @@
   align-items: center;
   text-align: center;
   background: #fff;
+
   color: #071013;
   min-height: 100dvh;
 
   .productos__info {
     width: 100%;
+
     #productos__header {
       padding: 2rem 7rem 0rem 2rem;
       font-size: 1.75rem;
       font-weight: 400;
       color: t.$color-primary;
-      max-width: 650px;
+      min-width: 372px;
       line-height: 1.2;
       text-align: left;
     }
@@ -35,11 +37,11 @@
       }
 
       h4 {
-        padding: 1rem 7rem 0rem 2rem;
+        padding: 0.5rem 7rem 0rem 2rem;
         font-size: 1rem;
         font-weight: 400;
         color: #3c3c3b;
-        max-width: 600px;
+        min-width: 345px;
         line-height: 1;
         text-align: left;
       }

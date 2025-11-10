@@ -1,6 +1,7 @@
 @use "../../styles/variables" as t;
 .navbar {
   width: 100%;
+  max-width: 100%;
   display: flex;
   position: fixed;
   top: 0;
@@ -24,6 +25,7 @@
   top: -100%;
   left: 0;
   width: 100%;
+  max-width: 100%;
   height: 100dvh;
   background: rgba(0, 0, 0, 0.93);
   display: flex;
@@ -44,14 +46,14 @@
     overflow: hidden;
 
     li a {
-      color: t.$color-primary;
+      color: #f0f1f0;
       font-size: 2.5rem;
       font-weight: 600;
       text-decoration: none;
       transition: color 0.2s;
 
       &:hover {
-        color: #aaff00;
+        color: #f0f1f0;
       }
     }
   }

@@ -1,4 +1,5 @@
 import { openWhatsappAndLog } from "../../utils/wa";
+
 import "../Products/_productos.scss";
 const WA_TUTOR = process.env.REACT_APP_WA_TUTOR || "";
 
@@ -20,19 +21,30 @@ const PRODUCTS = [
 export default function Productos() {
   return (
     <>
-      <section aria-labelledby="productos-title">
-        <div className="container">
-          <h2 id="productos-title">
-            GreenLine es una línea de suplementos naturales desarrollados
-            especialmente para potenciar su bienestar y calidad de vida.
-          </h2>
-          <h4>
-            Conformada por productos con componentes de origen natural, que
-            ayudan a prevenir y potenciar tratamientos, de una forma natural.
-          </h4>
-          <div className="products">
+      <section aria-labelledby="productos">
+        <div className="productos__main">
+          <div className="productos__info">
+            <h2 id="productos__header">
+              GreenLine es <br /> una línea de{" "}
+              <strong>suplementos naturales</strong> desarrollados especialmente
+              <strong>
+                {" "}
+                <br /> para potenciar su bienestar y calidad de vida.
+              </strong>
+            </h2>
+            <div className="productos__img">
+              <h4>
+                Conformada por productos <br /> con componentes de origen <br />{" "}
+                natural, que ayudan a <br /> prevenir y potenciar <br />
+                tratamientos, de una forma <br />
+                natural.
+              </h4>
+            </div>
+          </div>
+
+          <div className="productos__cards">
             {PRODUCTS.map((p) => (
-              <article key={p.id} className="product-card">
+              <article key={p.id} className="producto__card">
                 <img src={p.img} alt={p.nombre} loading="lazy" />
                 <div>
                   <h3 style={{ margin: "0.25rem 0" }}>{p.nombre}</h3>

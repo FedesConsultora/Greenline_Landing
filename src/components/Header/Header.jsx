@@ -30,16 +30,16 @@ export default function Header() {
       <div className={`overlay ${open ? "overlay--active" : ""}`}>
         <ul className="overlay__menu">
           <li>
-            <a href="#inicio">Inicio</a>
+            <a href="#inicio">INICIO</a>
           </li>
           <li>
-            <a href="#greenline">Greenline</a>
+            <a href="#greenline">GREENLINE</a>
           </li>
           <li>
-            <a href="#productos">Productos</a>
+            <a href="#productos">PRODUCTOS</a>
           </li>
           <li>
-            <a href="#contacto">Contacto</a>
+            <a href="#contacto">CONTACTO</a>
           </li>
         </ul>
       </div>

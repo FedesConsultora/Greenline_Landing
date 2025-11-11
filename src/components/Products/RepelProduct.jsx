@@ -1,6 +1,7 @@
 import { useState } from "react";
-import RepelLogo from "../../assets/img/Green Line RAPEL-02 1.png";
+import RepelLogo from "../../assets/img/Green Line RAPEL-02 1.webp";
 import Repel from "../../assets/img//repel1-1.webp";
+import "./_repelProduct.scss";
 
 export default function RepelProduct() {
   const [activeSection, setActiveSection] = useState("ventajas");
@@ -10,53 +11,35 @@ export default function RepelProduct() {
       title: "Por qué GreenLine Repel",
       content: (
         <ul>
-          <li>Mantiene alejado a los insectos molestos.</li>
-          <li>Tratamiento natural contra pulgas, garrapatas y ácaros. </li>
-          <li>Protección para tu perro, gato y a tu hogar.</li>
-          <li>Sus componentes naturales le dejan el pelo brillante ysedoso.</li>
-        </ul>
-      ),
-    },
-    presentaciones: {
-      title: "Presentaciones GreenLine Repel",
-      content: (
-        <ul>
+          <li>• Mantiene alejado a los insectos molestos.</li>
+          <li>• Tratamiento natural contra pulgas, garrapatas y ácaros. </li>
+          <li>• Protección para tu perro, gato y a tu hogar.</li>
           <li>
-            Emulsión en spray indicado para ayudar a repeler insectos que
-            afecten a perros y gatos.
-          </li>
-          <li>
-            Ampolla/Pipeta indicada para ayudar a mantener alejados insectos
-            molestos como: pulgas, moscas, mosquitos, flebótomos, etc. que
-            afectan a perros.{" "}
-          </li>
-          <li>
-            Spray ambiental indicado para el control de piojos, pulgas,
-            garrapatas, ácaros y otros insectos en cercanía de cuchas, caniles,
-            alfombras, pisos, zócalos u otros lugares donde habitan mascotas.
+            • Sus componentes naturales le dejan el pelo brillante y sedoso.
           </li>
         </ul>
       ),
     },
+
     ingredientes: {
       title: "Que contiene GreenLine Repel",
       content: (
         <ul>
           <li>
-            el Aceite de eucalipto muestra resultados promisorios en el control
-            de diversos insectos.
+            • El Aceite de eucalipto muestra resultados promisorios en el
+            control de diversos insectos.
           </li>
           <li>
-            El Aceite de pino ha demostrado actividad larvicida y repelente
+            • El Aceite de pino ha demostrado actividad larvicida y repelente
             frente a mosquitos y otros insectos.
           </li>
           <li>
-            el Aceite de neem es un repelente natural que ayuda a mantener
+            • El Aceite de neem es un repelente natural que ayuda a mantener
             alejados los insectos molestos como: pulgas, moscas, mosquitos,
             flebótomos, etc.
           </li>
           <li>
-            el Aceite de almendras es fuente natural de Vitamina E, con
+            • El Aceite de almendras es fuente natural de Vitamina E, con
             propiedades emolientes e hidratantes para la piel, da brillo y
             suavidad al pelo.
           </li>
@@ -77,7 +60,9 @@ export default function RepelProduct() {
         </h2>
 
         <div className="repel-divider">
-          Protección natural para tu familia y tu hogar
+          <div>
+            <h2>Protección natural para tu familia y tu hogar.</h2>
+          </div>
         </div>
 
         <div className="repel-info">
@@ -88,13 +73,18 @@ export default function RepelProduct() {
             mascota.
           </h2>
           <div>Logos</div>
-          <img src="" alt="Repel" />
-
-          {Object.keys(sections).map((key) => (
-            <button key={key} onClick={() => setActiveSection(key)}>
-              {key.toUpperCase()}
-            </button>
-          ))}
+          <img src={RepelLogo} alt="Repel" />
+          <div className="prod-buttons">
+            {Object.keys(sections).map((key) => (
+              <button
+                key={key}
+                onClick={() => setActiveSection(key)}
+                className={activeSection === key ? "active" : "inactive"}
+              >
+                {key.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="repel-dynamic-section">

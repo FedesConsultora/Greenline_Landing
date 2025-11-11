@@ -3,6 +3,7 @@ import Probiotics from "../../assets/img/Group-2.webp";
 import Repel from "../../assets/img/repel1-1.webp";
 import ProbioticProduct from "./ProbioticProduct";
 import RepelProduct from "./RepelProduct";
+
 import "../Products/_productos.scss";
 
 export default function Productos() {
@@ -57,9 +58,13 @@ export default function Productos() {
           >
             <img src={Repel} alt="Repel" />
           </div>
-
-          <div className="divider">
-            <h2>Porque lo primero es prevenir</h2>
+        </div>
+        <div className="divider">
+          <div>
+            <h2>
+              Porque lo primero es <strong>PREVENIR </strong> ; y eso también es
+              cuidarlos.
+            </h2>
           </div>
         </div>
 

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import GreenlineProbiotics from "../../assets/img/Green Line PROBIOTICS 1.png";
 import Probiotics from "../../assets/img/Group-2.webp";
+import DividerImage from "../../assets/img/Group 9.webp";
+import GreenLine from "../../assets/img/GreenLine 1 (2).png";
+
 import "./_probioticProduct.scss";
 
 export default function ProbioticProduct() {
@@ -8,35 +11,38 @@ export default function ProbioticProduct() {
 
   const sections = {
     ventajas: {
+      label: "VENTAJAS",
       title: "Por qué GreenLine PROBIOTICS",
       content: (
         <ul>
-          <li>Alta concentración de cepas</li>
-          <li>Rico sabor!</li>
-          <li>Fácil de administrar con su jeringa dosificadora</li>
-          <li>Para todas las edades</li>
+          <li>• Alta concentración de cepas</li>
+          <li>• Rico sabor!</li>
+          <li>• Fácil de administrar con su jeringa dosificadora</li>
+          <li>• Para todas las edades</li>
         </ul>
       ),
     },
     beneficios: {
+      label: "BENEFICIOS",
       title: "Beneficios de GreenLine PROBIOTICS todos los días",
       content: (
         <ul>
-          <li>Aumenta absorción de nutrientes</li>
-          <li>Refuerza el sistema inmune</li>
-          <li>Mejora el bienestar general</li>
-          <li>Previene diarreas</li>
-          <li>Mejora calidad de heces</li>
+          <li>• Aumenta absorción de nutrientes</li>
+          <li>• Refuerza el sistema inmune</li>
+          <li>• Mejora el bienestar general</li>
+          <li>• Previene diarreas</li>
+          <li>• Mejora calidad de heces</li>
         </ul>
       ),
     },
     accion: {
+      label: "COMO FUNCIONA",
       title: "Cómo actúa GreenLine PROBIOTICS",
       content: (
         <ul>
-          <li>Coloniza el intestino</li>
-          <li>Restaura el equilibrio microbiano</li>
-          <li>Refuerza inmunidad y digestión</li>
+          <li>• Coloniza el intestino</li>
+          <li>• Restaura el equilibrio microbiano</li>
+          <li>• Refuerza inmunidad y digestión</li>
         </ul>
       ),
     },
@@ -58,23 +64,42 @@ export default function ProbioticProduct() {
         </div>
 
         <div className="probiotics-divider">
-          Su bienestar empieza por dentro
+          <div>
+            <h2>Su bienestar empieza por dentro</h2>
+          </div>
         </div>
 
         <div className="probiotics-info">
+          <h3>Protege lo que no se ve</h3>
+          <h1>Cuida su microbiota</h1>
+          <h2>
+            Su fórmula está compuesta por bacterias, levaduras y enzimas de alta
+            efectividad, específicas para la microbiota de perros y gatos.
+          </h2>
           <div>Logos</div>
           <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
-
-          {Object.keys(sections).map((key) => (
-            <button key={key} onClick={() => setActiveSection(key)}>
-              {key.toUpperCase()}
-            </button>
-          ))}
+          <div className="prod-buttons">
+            {Object.keys(sections).map((key) => (
+              <button
+                key={key}
+                onClick={() => setActiveSection(key)}
+                className={activeSection === key ? "active" : "inactive"}
+              >
+                {sections[key].label}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="probiotics-dynamic-section">
           <h1>{sections[activeSection].title}</h1>
           {sections[activeSection].content}
+        </div>
+        <div className="divider-prod">
+          <div>
+            {" "}
+            <img src={GreenLine} alt="" />
+          </div>
         </div>
       </div>
     </section>

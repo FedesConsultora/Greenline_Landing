@@ -7,51 +7,166 @@
   justify-content: center !important;
   text-align: start;
   gap: 20px;
-  padding: 40px 20px;
+  padding: 0;
 
   .probiotics-presentation {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+    padding: 2rem;
     img {
+      padding: 2rem;
       display: block !important;
       height: auto;
     }
-  }
+    h1 {
+      font-size: 2rem;
+      color: #2d6bc8;
+      padding: 1rem;
+      text-align: center;
+    }
 
-  h1 {
-    font-size: 2rem;
-    color: #2d6bc8;
-    margin: 10px 0;
-  }
-
-  h2,
-  h3 {
-    font-size: 1.2rem;
-    color: #071013;
-    line-height: 1.5;
-  }
-
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-
-    li {
-      margin-bottom: 8px;
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #3c3c3b;
+      line-height: 1.5;
+      text-align: center;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #2d6bc8;
     }
   }
 
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #2d6bc8;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s;
+  .probiotics-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #2d6bc8;
+      padding-top: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #2d6bc8;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 2rem;
+    }
+    h2 {
+      padding: 0rem 2rem 2rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #3c3c3b;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+  .probiotics-dynamic-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    margin: 0rem 2rem 2rem 2rem;
+    border-radius: 3rem;
+    background-color: #f6f5f5;
+
+    h1 {
+      display: flex;
+      text-align: start;
+      color: #2d6bc8;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        display: flex;
+        text-align: start;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #4c4c4c;
+      }
+    }
+  }
+  .prod-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      margin-top: 1rem;
+      padding: 8px 16px 6px 16px;
+      background-color: #2d6bc8;
+      color: #fff;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-weight: 400;
+      transition: background 0.3s;
+      justify-items: center;
+
+      &.active {
+        background-color: #2d6bc8;
+        transition: none;
+      }
+
+      &.inactive {
+        background-color: #8895a3;
+        transition: none;
+      }
+    }
+  }
+
+  .probiotics-divider {
+    background: linear-gradient(#397dc9 100%, #0000 100%);
+    background-size: cover;
+    height: 80px;
+    width: 100%;
+    max-width: 100%;
+
+    div {
+      display: inline-block;
+      white-space: nowrap;
+      animation: moveRight 15s linear infinite;
+
+      h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        color: #82b9da;
+        margin: 1rem 0rem 0rem 0rem;
+      }
+    }
+  }
+  .divider-prod {
+    background-image: url("../../assets//img//Group\ 9.webp");
+    background-size: cover;
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 4rem;
+
+    img {
+      transform: scale(1.4);
+
+      margin-left: 3rem;
+      margin-top: 4rem;
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 }

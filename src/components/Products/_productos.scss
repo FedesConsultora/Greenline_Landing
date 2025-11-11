@@ -56,13 +56,11 @@
     max-width: 900px;
 
     .probiotics-background {
-      background-image: url("../../assets//img//PROBIOTICS.webp");
-      background-size: cover;
+      background: radial-gradient(circle, #a1afbf 0%, #427abb 100%);
     }
 
     .repel-background {
-      background-image: url("../../assets//img/REPEL.webp");
-      background-size: cover;
+      background: radial-gradient(circle, #ffd6bf 0%, #f88c56 100%);
     }
 
     .divider {

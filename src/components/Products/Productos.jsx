@@ -30,7 +30,7 @@ function useMediaQuery(q) {
   return m;
 }
 
-export default function Productos() {
+export default function Productos({ id }) {
   const { ref, ctx } = useGsapContext();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
@@ -127,7 +127,7 @@ export default function Productos() {
 
   // ======= Intros =======
   const IntroMobile = () => (
-    <div className="productos__intro">
+    <div className="productos__intro" id={id}>
       <div className="intro__copy">
         <h2 id="productos__header">
           GreenLine es <br /> una línea de{" "}
@@ -155,7 +155,7 @@ export default function Productos() {
   );
 
   const IntroDesktop = () => (
-    <div className="productos__intro--desktop">
+    <div className="productos__intro--desktop" id={id}>
       {/* IZQ: HUELLAS | TEXTO (dos columnas internas) */}
       <div className="introDesk__left">
         <div className="intro__art" aria-hidden="true">
@@ -189,7 +189,7 @@ export default function Productos() {
   );
 
   return (
-    <section id="productos" aria-labelledby="productos" ref={ref}>
+    <section id={id} aria-labelledby="productos" ref={ref}>
       {isDesktop ? <IntroDesktop /> : <IntroMobile />}
 
       {/* Cards (mismo JSX; invierto solo en desktop con CSS grid-areas) */}

@@ -1,9 +1,9 @@
 import "../Hero/_hero.scss";
 
-export default function Hero() {
+export default function Hero({ id }) {
   return (
     <>
-      <section className="hero">
+      <section className="hero" id={id}>
         <div className="hero__info">
           <h1 className="hero__title">
             El cuidado

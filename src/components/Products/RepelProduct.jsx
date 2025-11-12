@@ -3,7 +3,7 @@ import RepelLogo from "../../assets/img/Green Line RAPEL-02 1.webp";
 import Repel from "../../assets/img//repel1-1.webp";
 import "./_repelProduct.scss";
 
-export default function RepelProduct() {
+export default function RepelProduct({ id }) {
   const [activeSection, setActiveSection] = useState("ventajas");
 
   const sections = {
@@ -49,7 +49,7 @@ export default function RepelProduct() {
   };
 
   return (
-    <section>
+    <section id={id}>
       <div className="repel__main">
         <img src={RepelLogo} alt="GreenLine Repel" />
         <img src={Repel} alt="Packaging Repel" />

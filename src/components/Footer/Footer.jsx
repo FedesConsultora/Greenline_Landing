@@ -7,9 +7,9 @@ import Instagram from "../../assets//img//ig-footer.webp";
 import Linkedin from "../../assets//img/li-footer.webp";
 import "../Footer/_footer.scss";
 
-export default function Footer() {
+export default function Footer({ id }) {
   return (
-    <footer class="footer">
+    <footer class="footer" id={id}>
       <div class="footer-content">
         <div className="footer-top">
           <h1>
@@ -25,7 +25,7 @@ export default function Footer() {
                 style={{
                   marginLeft: "1rem",
                   verticalAlign: "middle",
-                  bottom: "3px",
+                  marginBottom: "6px",
                   marginRight: "0.2rem",
                 }}
               />
@@ -42,12 +42,12 @@ export default function Footer() {
               size={20}
               style={{
                 verticalAlign: "middle",
-                bottom: "3px",
+                marginBottom: "4px",
                 marginRight: "0.2rem",
               }}
             />
             <a
-              href="https://www.whatsapp.com/?lang=es"
+              href="tel:+541147975544"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -59,12 +59,12 @@ export default function Footer() {
               style={{
                 marginLeft: "1.5rem",
                 verticalAlign: "middle",
-                bottom: "3px",
+                marginBottom: "5px",
                 whiteSpace: "nowrap",
               }}
             />
             <a
-              href="https://www.whatsapp.com/?lang=es"
+              href="https://wa.me/5491122759850"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -79,12 +79,12 @@ export default function Footer() {
               style={{
                 marginLeft: "1rem",
                 verticalAlign: "middle",
-                bottom: "2px",
+                marginBottom: "5px",
                 marginRight: "0.3rem",
               }}
             />
             <a
-              href="https://www.whatsapp.com/?lang=es"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=consultas@fatrovonfranken.com.ar&su=Consulta%20desde%20el%20sitio%20web"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -104,7 +104,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.instagram.com/fatrovonfranken_pets/"
+            href="https://www.facebook.com/FatroVonFranken"
             target="_blank"
             rel="noopener noreferrer"
           >

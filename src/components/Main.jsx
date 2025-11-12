@@ -7,10 +7,10 @@ import RepelProduct from "./Products/RepelProduct";
 export default function Main() {
   return (
     <main>
-        <Hero />
-        <Productos />
-        <ProbioticProduct />
-        <RepelProduct />
+      <Hero />
+      <Productos id="productos" />
+      <ProbioticProduct id="probiotics" />
+      <RepelProduct id="repel" />
     </main>
   );
 }

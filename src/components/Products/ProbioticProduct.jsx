@@ -5,7 +5,7 @@ import GreenLine from "../../assets/img/GreenLine 1 (2).png";
 
 import "./_probioticProduct.scss";
 
-export default function ProbioticProduct() {
+export default function ProbioticProduct({ id }) {
   const [activeSection, setActiveSection] = useState("ventajas");
 
   const sections = {
@@ -48,7 +48,7 @@ export default function ProbioticProduct() {
   };
 
   return (
-    <section>
+    <section id={id}>
       <div className="probiotics__main">
         <div className="probiotics-presentation">
           <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />

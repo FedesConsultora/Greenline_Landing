@@ -98,7 +98,7 @@ export default function Header({ id }) {
                 key={item.id}
                 onClick={() => handleClick(item.id)}
                 className={activeSection === item.id ? "active" : ""}
-                href='#'
+                href={`#${item.id}`}
               >
                 {item.label}
               </a>
@@ -149,7 +149,7 @@ export default function Header({ id }) {
               key={item.id}
               onClick={() => handleClick(item.id)}
               className={activeSection === item.id ? "active" : ""}
-              href='#'
+              href={`#${item.id}`}
             >
               {item.label}
             </a>

@@ -24,8 +24,8 @@ export default function Productos() {
 
     // Estado inicial
     gsap.set([probiAsset, repelAsset], { clearProps: 'all' });
-    gsap.set(probiAsset, { xPercent: -75, opacity: 0, willChange: 'transform,opacity' });
-    gsap.set(repelAsset, { xPercent:  75, opacity: 0, willChange: 'transform,opacity' });
+    gsap.set(probiAsset, { xPercent: -55, opacity: 0, willChange: 'transform,opacity' });
+    gsap.set(repelAsset, { xPercent:  55, opacity: 0, willChange: 'transform,opacity' });
 
     ctx.current.add(() => {
       const make = (asset, card) => {
@@ -44,11 +44,11 @@ export default function Productos() {
           defaults: { ease: 'power2.out' },
           scrollTrigger: {
             trigger: card,
-            start: () => `top+=${headerH()} bottom`,
+            start: () => `top+=${headerH()} 80%`,
             end:   () => `top+=${headerH()} 40%`,
             scrub: true,
             invalidateOnRefresh: true,
-            markers: true
+            // markers: true
           }
         });
 

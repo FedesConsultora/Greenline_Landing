@@ -90,6 +90,7 @@
         display: flex;
         text-align: start;
         text-decoration: none;
+        line-height: 2;
         font-size: 1.2rem;
         color: #4c4c4c;
       }
@@ -136,6 +137,7 @@
     div {
       display: inline-block;
       white-space: nowrap;
+      width: 200%;
       animation: moveRight 15s linear infinite;
 
       h2 {
@@ -163,10 +165,10 @@
 
   @keyframes moveRight {
     0% {
-      transform: translateX(-50%);
+      transform: translateX(-600px);
     }
     100% {
-      transform: translateX(0);
+      transform: translateX(600px);
     }
   }
 }

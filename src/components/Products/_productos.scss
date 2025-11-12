@@ -1,18 +1,23 @@
-@use '../../styles/_variables' as t;
+@use "../../styles/_variables" as t;
 
 /* markers por encima del header/nav */
 .gsap-marker-start,
 .gsap-marker-end,
 .gsap-marker-scroller-start,
-.gsap-marker-scroller-end { z-index: 99999 !important; position: fixed !important; }
+.gsap-marker-scroller-end {
+  z-index: 99999 !important;
+  position: fixed !important;
+}
 
-.productos__main{
-  display: flex; flex-direction: column; gap: 0;
+.productos__main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 /* Desktop: 2 columnas */
-@media (min-width: 1024px){
-  .productos__main{
+@media (min-width: 1024px) {
+  .productos__main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 0rem;
@@ -67,7 +72,7 @@
     padding: 4rem 2rem;
   }
 }
-.product-card{
+.product-card {
   position: relative;
   border-radius: 0;
   margin: 0;
@@ -78,24 +83,66 @@
   isolation: isolate;
 }
 
-$probiotics-bg: #3A77C8;
+$probiotics-bg: #3a77c8;
+.productos__info {
+  width: 100%;
 
-.card--probiotics{
-  background:
-    radial-gradient(120% 70% at 50% 60%, rgba(255,255,255,.10), transparent 60%),
-    linear-gradient(180deg, rgba(0,0,0,.06), transparent 40%),
+  #productos__header {
+    padding: 2rem 7rem 0rem 2rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: t.$color-primary;
+    min-width: 372px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .productos__img {
+    min-height: 500px;
+    background-image: url("../../assets//img/products-section.webp");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h4 {
+      padding: 0.5rem 7rem 0rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #3c3c3b;
+      min-width: 345px;
+      line-height: 1;
+      text-align: left;
+    }
+  }
+}
+.card--probiotics {
+  background: radial-gradient(
+      120% 70% at 50% 60%,
+      rgba(255, 255, 255, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), transparent 40%),
     $probiotics-bg;
 }
 
-.card--repel{
-  background:
-    radial-gradient(120% 70% at 40% 50%, rgba(255,255,255,.10), transparent 60%),
-    linear-gradient(180deg, rgba(0,0,0,.06), transparent 40%),
+.card--repel {
+  background: radial-gradient(
+      120% 70% at 40% 50%,
+      rgba(255, 255, 255, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), transparent 40%),
     t.$color-secondary;
 }
 
 /* ✅ controla tamaño: no gigante en desktop */
-.product-asset{
+.product-asset {
   position: relative;
   z-index: 10;
   width: clamp(280px, 74vw, 820px);
@@ -107,58 +154,67 @@ $probiotics-bg: #3A77C8;
 }
 
 /* Imagen */
-.product-image{
+.product-image {
   position: relative;
   z-index: 10;
   width: clamp(240px, 70vw, 780px);
   height: auto;
   display: block;
-  filter: drop-shadow(0 14px 24px rgba(0,0,0,.28));
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.28));
 }
 
 /* Título superpuesto */
-.product-title{
+.product-title {
   position: absolute;
   top: 8%;
   left: 5%;
   z-index: 20;
   pointer-events: none;
   color: #fff;
-  text-shadow: 0 3px 14px rgba(0,0,0,.35);
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
   display: grid;
   gap: 4px;
 
   /* ⬆️ letra un poco más grande */
-  .brand{
+  .brand {
     font-weight: 600;
     font-size: clamp(1.25rem, 4.4vw, 2.4rem);
     line-height: 1.05;
 
     /* Green en bold, Line normal */
-    .green{ font-weight: 900; margin-right: .25ch; }
-    .line{  font-weight: 500; }
+    .green {
+      font-weight: 900;
+      margin-right: 0.25ch;
+    }
+    .line {
+      font-weight: 500;
+    }
   }
 
-  .name{
+  .name {
     text-transform: uppercase;
     font-weight: 900; /* todo en negrita */
     font-size: clamp(1.9rem, 9vw, 4.6rem);
-    line-height: .98;
-    letter-spacing: .3px;
+    line-height: 0.98;
+    letter-spacing: 0.3px;
   }
 }
 
 /* En la tarjeta naranja, alineá a la derecha */
-.card--repel .product-title{
-  left: auto; right: 6%; text-align: right;
+.card--repel .product-title {
+  left: auto;
+  right: 6%;
+  text-align: right;
 }
 
-.productos__detalle{
+.productos__detalle {
   display: grid;
   gap: 24px;
   padding: 24px 0;
 }
 
-@media (min-width: 1024px){
-  .product-card{ min-height: 70svh; }
+@media (min-width: 1024px) {
+  .product-card {
+    min-height: 70svh;
+  }
 }

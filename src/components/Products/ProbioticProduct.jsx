@@ -1,7 +1,6 @@
 import { useState } from "react";
 import GreenlineProbiotics from "../../assets/img/Green Line PROBIOTICS 1.png";
 import Probiotics from "../../assets/img/Group-2.webp";
-import DividerImage from "../../assets/img/Group 9.webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";
 
 import "./_probioticProduct.scss";

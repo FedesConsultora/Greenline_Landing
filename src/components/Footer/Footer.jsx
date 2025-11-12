@@ -46,7 +46,13 @@ export default function Footer() {
                 marginRight: "0.2rem",
               }}
             />
-            <a href="#">(+54 11) 4797-5544</a>
+            <a
+              href="https://www.whatsapp.com/?lang=es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              (+54 11) 4797-5544
+            </a>
             <FaWhatsapp
               color="#fff"
               size={20}
@@ -57,7 +63,13 @@ export default function Footer() {
                 whiteSpace: "nowrap",
               }}
             />
-            <a href="#">+54 9 11 2275-9850</a>
+            <a
+              href="https://www.whatsapp.com/?lang=es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +54 9 11 2275-9850
+            </a>
           </div>
           <div>
             {" "}
@@ -71,14 +83,20 @@ export default function Footer() {
                 marginRight: "0.3rem",
               }}
             />
-            <a href="#">consultas@fatrovonfranken.com.ar</a>
+            <a
+              href="https://www.whatsapp.com/?lang=es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              consultas@fatrovonfranken.com.ar
+            </a>
           </div>
         </div>
 
         <div className="footer-media">
           <p>SIGUENOS</p>
           <a
-            href="https://www.instagram.com/fatrovonfranken/"
+            href="https://www.instagram.com/fatrovonfranken_pets/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -86,7 +104,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.facebook.com/fatrovonfranken"
+            href="https://www.instagram.com/fatrovonfranken_pets/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -94,7 +112,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.linkedin.com/company/fatro-von-franken/"
+            href="https://www.linkedin.com/company/fatro-von-franken"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -1,7 +1,18 @@
-@use './variables' as t;
+@use "./variables" as t;
 
-* { box-sizing: border-box; margin: 0; padding: 0;}
-html, body, #root { height: 100%; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
 body {
   margin: 0 !important;
   font-family: t.$font-family;
@@ -10,7 +21,10 @@ body {
 }
 
 /* Mobile-first */
-.container { width: min(92%, 1140px); margin: 0 auto; }
+.container {
+  width: min(92%, 1140px);
+  margin: 0 auto;
+}
 .btn {
   display: inline-block;
   padding: 0.875rem 1.25rem;
@@ -21,28 +35,76 @@ body {
   border-radius: 10px;
   font-weight: 700;
 }
-.btn--secondary { background: t.$color-secondary; }
+.btn--secondary {
+  background: t.$color-secondary;
+}
 
-header, footer { background: t.$color-white; }
-header { position: sticky; top: 0; border-bottom: 1px solid #eee; z-index: 10; }
-footer { border-top: 1px solid #eee; padding: 2rem 0; font-size: 0.9rem; }
+header,
+footer {
+  background: t.$color-white;
+}
+header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+  background-color: rgba(249, 246, 255, 0.1);
+}
+footer {
+  border-top: 1px solid #eee;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
 
 /* Tipografía base */
-h1 { font-size: 1.8rem; line-height: 1.1; margin: 1.2rem 0; }
-h2 { font-size: 1.25rem; margin: 1rem 0; }
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 1.2rem 0;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+a {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
 
 /* Hero y grilla productos */
-.hero { padding: 1.5rem 0; }
-.products { display: grid; gap: 1rem; grid-template-columns: 1fr; }
-.product-card {
-  border: 1px solid #eee; border-radius: 14px; padding: 1rem;
-  display: grid; gap: 0.5rem;
+.hero {
+  padding: 1.5rem 0;
 }
-.product-card img { width: 100%; height: auto; border-radius: 10px; }
+.products {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+
 
 /* Desktop ↑ */
 @media (min-width: 768px) {
-  h1 { font-size: 2.2rem; }
-  .hero { padding: 2.5rem 0; }
-  .products { grid-template-columns: repeat(2, 1fr); }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .hero {
+    padding: 2.5rem 0;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .hero {
+    padding: 3rem;
+  }
+  .products {
+    grid-template-columns: repeat(4, 4fr);
+  }
 }

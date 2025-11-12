@@ -1,0 +1,134 @@
+/* _product-detail.scss */
+
+.repel__main {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 20px;
+
+  .repel-divider {
+    background: linear-gradient(#ff8040 100%, #0000 100%);
+    background-size: cover;
+    height: 80px;
+    width: 100%;
+    max-width: 100%;
+
+    div {
+      display: inline-block;
+      white-space: nowrap;
+      animation: moveRight 15s linear infinite;
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        color: #ffa77a;
+        margin: 1.8rem 0rem 0rem 0rem;
+      }
+    }
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  h1 {
+    max-width: 300px;
+    font-size: 2rem;
+    color: #ff8040;
+    margin: 10px 0;
+  }
+
+  h2 {
+    max-width: 300px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #071013;
+    line-height: 1.2;
+  }
+  h3 {
+    max-width: 300px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #ff8040;
+    line-height: 1.2;
+  }
+
+  .repel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .repel-dynamic-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    margin: 0rem 2rem 2rem 2rem;
+    border-radius: 3rem;
+    background-color: #f6f5f5;
+
+    h1 {
+      display: flex;
+      text-align: start;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        display: flex;
+        text-align: start;
+        text-decoration: none;
+        font-size: 1.2rem;
+        line-height: 2;
+        color: #4c4c4c;
+      }
+    }
+  }
+  .prod-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      margin-top: 2rem;
+
+      padding: 10px 16px 8px 16px;
+      background-color: #ff8040;
+      color: #fff;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-weight: 400;
+      transition: background 0.3s;
+      justify-items: center;
+
+      &.active {
+        background-color: #ff8040;
+        transition: none;
+      }
+
+      &.inactive {
+        background-color: #8895a3;
+        transition: none;
+      }
+    }
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

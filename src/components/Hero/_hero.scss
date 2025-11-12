@@ -1,0 +1,50 @@
+.hero {
+  height: 100dvh;
+  width: 100%;
+  background-image: url("../../assets/img/hero-mobile.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 1px !important;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  &__info {
+    padding: 5rem 2rem 1rem 2rem;
+    max-width: 400px;
+  }
+
+  &__title {
+    color: #f0f1f0;
+    text-align: left;
+    font-weight: 900;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    color: #f0f1f0;
+    text-align: left;
+    line-height: 1.3rem;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__subtitle {
+      font-size: 3rem !important;
+      max-width: 600px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    background-attachment: fixed;
+  }
+}

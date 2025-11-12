@@ -53,7 +53,7 @@ export default function ProbioticProduct() {
       <div className="probiotics__main">
         <div className="probiotics-presentation">
           <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
-          <img src={Probiotics} alt="" />
+          <img src={Probiotics} alt="Packaging Probiotics" />
           <h1>Lo que no ves, también importa</h1>
           <h2>
             La microbiota intestinal es un ecosistema vivo: millones de

@@ -22,7 +22,7 @@ export default function RepelProduct() {
     },
 
     ingredientes: {
-      title: "Que contiene GreenLine Repel",
+      title: "Qué contiene GreenLine Repel",
       content: (
         <ul>
           <li>
@@ -51,12 +51,12 @@ export default function RepelProduct() {
   return (
     <section>
       <div className="repel__main">
-        <img src={RepelLogo} alt="" />
-        <img src={Repel} alt="" />
+        <img src={RepelLogo} alt="GreenLine Repel" />
+        <img src={Repel} alt="Packaging Repel" />
         <h1>Protección natural contra insectos molestos.</h1>
         <h2>
           Línea de repelentes con componentes naturales que mantienen alejados a
-          los insectos molestos. Además, aportan brillo y suavidad al pelaje.
+          los insectos. Además, aportan brillo y suavidad al pelaje.
         </h2>
 
         <div className="repel-divider">

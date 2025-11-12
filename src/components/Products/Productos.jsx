@@ -23,23 +23,17 @@ export default function Productos() {
     if (!probiCard || !repelCard || !probiAsset || !repelAsset) return;
 
     // Estado inicial
-<<<<<<< Updated upstream
-    gsap.set([probiAsset, repelAsset], { clearProps: 'all' });
-    gsap.set(probiAsset, { xPercent: -55, opacity: 0, willChange: 'transform,opacity' });
-    gsap.set(repelAsset, { xPercent:  55, opacity: 0, willChange: 'transform,opacity' });
-=======
     gsap.set([probiAsset, repelAsset], { clearProps: "all" });
     gsap.set(probiAsset, {
-      xPercent: -75,
+      xPercent: -55,
       opacity: 0,
       willChange: "transform,opacity",
     });
     gsap.set(repelAsset, {
-      xPercent: 75,
+      xPercent: 55,
       opacity: 0,
       willChange: "transform,opacity",
     });
->>>>>>> Stashed changes
 
     ctx.current.add(() => {
       const make = (asset, card) => {
@@ -58,21 +52,12 @@ export default function Productos() {
           defaults: { ease: "power2.out" },
           scrollTrigger: {
             trigger: card,
-<<<<<<< Updated upstream
             start: () => `top+=${headerH()} 80%`,
-            end:   () => `top+=${headerH()} 40%`,
-            scrub: true,
-            invalidateOnRefresh: true,
-            // markers: true
-          }
-=======
-            start: () => `top+=${headerH()} bottom`,
             end: () => `top+=${headerH()} 40%`,
             scrub: true,
             invalidateOnRefresh: true,
-            markers: true,
+            // markers: true
           },
->>>>>>> Stashed changes
         });
 
         // 1) entra el asset (logo/foto)

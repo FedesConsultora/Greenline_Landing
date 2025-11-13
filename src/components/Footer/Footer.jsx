@@ -5,6 +5,7 @@ import { IoMailOutline } from "react-icons/io5";
 import Facebook from "../../assets//img/fb-footer.png";
 import Instagram from "../../assets//img//ig-footer.webp";
 import Linkedin from "../../assets//img/li-footer.webp";
+import VFLogo from "../../assets/img/Group-_6_.webp";
 import "../Footer/_footer.scss";
 
 export default function Footer({ id }) {
@@ -123,9 +124,22 @@ export default function Footer({ id }) {
         <div className="footer-end">
           <p>
             {" "}
-            <strong>GreenLine by </strong>Fatro Von Franken.
+            <strong>GreenLine by </strong>{" "}
+            <img
+              style={{ paddingLeft: "0.5rem", top: "2rem" }}
+              src={VFLogo}
+              alt="Von Franken"
+            />
           </p>
-          <p> Copyright © 2025 Fedes Consultora</p>
+
+          <a
+            href="https://www.fedesagency.com/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            {" "}
+            Copyright © 2025 Fedes Consultora
+          </a>
         </div>
       </div>
     </footer>

@@ -72,8 +72,7 @@ export default function RepelProduct({ id }) {
             Su fórmula posee extractos y aceites vegetales, saludables para tu
             mascota.
           </h2>
-          <div>Logos</div>
-          <img src={RepelLogo} alt="Repel" />
+
           <div className="prod-buttons">
             {Object.keys(sections).map((key) => (
               <button

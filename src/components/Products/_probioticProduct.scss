@@ -158,7 +158,7 @@
       display: inline-block;
       white-space: nowrap;
       width: 200%;
-      animation: moveRight 15s linear infinite;
+      animation: moveLeft 15s linear infinite;
 
       h2 {
         font-size: 1.8rem;
@@ -183,12 +183,12 @@
     }
   }
 
-  @keyframes moveRight {
+  @keyframes moveLeft {
     0% {
-      transform: translateX(-600px);
+      transform: translateX(700px);
     }
     100% {
-      transform: translateX(600px);
+      transform: translateX(-700px);
     }
   }
 }

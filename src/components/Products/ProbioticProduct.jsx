@@ -1,5 +1,6 @@
 import { useState } from "react";
-import GreenlineProbiotics from "../../assets/img//Green-Line-PROBIOTICS-DOUBLE.webp";
+import GreenlineProbioticsDouble from "../../assets/img//Green-Line-PROBIOTICS-DOUBLE.webp";
+import GreenlineProbiotics from "../../assets//img//Green Line PROBIOTICS 1.png";
 import Probiotics from "../../assets/img/Group-2.webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";
 
@@ -51,7 +52,17 @@ export default function ProbioticProduct({ id }) {
     <section id={id}>
       <div className="probiotics__main">
         <div className="probiotics-presentation">
-          <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
+          <img
+            className="desktop-img"
+            src={GreenlineProbiotics}
+            alt="GreenLine Probiotics"
+          />
+          {/* Imagen para mobile */}
+          <img
+            className="mobile-img"
+            src={GreenlineProbioticsDouble}
+            alt="GreenLine Probiotics Double"
+          />
           <img src={Probiotics} alt="Packaging Probiotics" />
           <h1>Lo que no ves, también importa</h1>
           <h2>
@@ -76,7 +87,11 @@ export default function ProbioticProduct({ id }) {
             efectividad, específicas para la microbiota de perros y gatos.
           </h2>
           <div>Logos</div>
-          <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
+          <img
+            style={{ paddingBottom: "2rem" }}
+            src={GreenlineProbiotics}
+            alt="GreenLine Probiotics"
+          />
           <div className="prod-buttons">
             {Object.keys(sections).map((key) => (
               <button

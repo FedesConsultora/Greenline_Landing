@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GreenlineProbiotics from "../../assets/img/Green Line PROBIOTICS 1.png";
+import GreenlineProbiotics from "../../assets/img//Green-Line-PROBIOTICS-DOUBLE.webp";
 import Probiotics from "../../assets/img/Group-2.webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";
 

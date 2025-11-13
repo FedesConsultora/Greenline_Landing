@@ -151,7 +151,7 @@
     display: inline-block;
     white-space: nowrap;
     top: 4px;
-    animation: scrollText 20s linear infinite;
+    animation: scrollText 8s linear infinite;
     will-change: transform;
     position: relative;
 
@@ -161,16 +161,16 @@
       left: 100%;
 
       white-space: nowrap;
-      color: #9eeb00;
-      font-size: 1.3rem;
+      color: #fff;
+      font-size: 1.6rem;
       font-weight: 700;
-      padding-left: 12rem;
+      padding-left: 20rem;
     }
   }
 
   p {
-    color: #9eeb00;
-    font-size: 1.3rem;
+    color: #fff;
+    font-size: 1.6rem;
     font-weight: 700;
     margin: 0;
 

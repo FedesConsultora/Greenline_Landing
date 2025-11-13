@@ -235,6 +235,14 @@ export default function Productos({ id }) {
           </div>
         </article>
       </div>
+      <div class="main-divider">
+        <div
+          class="scroll"
+          data-text="Porque lo primero es PREVENIR, y eso también es cuidarlos. "
+        >
+          <p>Porque lo primero es PREVENIR, y eso también es cuidarlos.</p>
+        </div>
+      </div>
     </section>
   );
 }

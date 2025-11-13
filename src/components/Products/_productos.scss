@@ -153,7 +153,7 @@
   position: relative;
   border-radius: 0;
   margin: 0;
-  min-height: 66svh;
+  min-height: 26svh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -186,7 +186,7 @@ $probiotics-bg: #3a77c8;
 .product-asset {
   position: relative;
   z-index: 10;
-  width: clamp(280px, 74vw, 820px);
+  width: clamp(80px, 40vw, 500px);
   height: auto;
   display: grid;
   place-items: center;
@@ -196,7 +196,7 @@ $probiotics-bg: #3a77c8;
 .product-image {
   position: relative;
   z-index: 10;
-  width: clamp(240px, 70vw, 780px);
+  width: clamp(100px, 40vw, 600px);
   height: auto;
   display: block;
   filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.28));
@@ -205,7 +205,7 @@ $probiotics-bg: #3a77c8;
 /* Título superpuesto */
 .product-title {
   position: absolute;
-  top: 8%;
+  top: 15%;
   left: 5%;
   z-index: 20;
   pointer-events: none;
@@ -216,7 +216,7 @@ $probiotics-bg: #3a77c8;
 
   .brand {
     line-height: 1.05;
-    font-size: 2.6rem;
+    font-size: 2rem;
     .green {
       font-weight: 900;
     } /* Green en bold */
@@ -227,19 +227,19 @@ $probiotics-bg: #3a77c8;
   .name {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     line-height: 0.98;
     letter-spacing: 0.35px;
   }
 }
 
 .card--repel .product-title {
-  left: auto;
-  right: 6%;
+  left: 60%;
+  right: 0%;
+  top: 20%;
   text-align: right;
   .brand {
     position: relative;
-    left: 65px;
   }
 }
 

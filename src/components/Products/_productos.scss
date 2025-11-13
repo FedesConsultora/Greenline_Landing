@@ -151,7 +151,7 @@
     display: inline-block;
     white-space: nowrap;
     top: 4px;
-    animation: scrollText 8s linear infinite;
+    animation: scrollText 15s linear infinite;
     will-change: transform;
     position: relative;
 
@@ -180,10 +180,10 @@
 
 @keyframes scrollText {
   from {
-    transform: translateX(0);
+    transform: translateX(700px);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-700px);
   }
 }
 @media (min-width: 1024px) {
@@ -264,7 +264,7 @@ $probiotics-bg: #3a77c8;
 
   .brand {
     line-height: 1.05;
-    font-size: 2rem;
+    font-size: 1.5rem;
     .green {
       font-weight: 900;
     } /* Green en bold */
@@ -275,10 +275,15 @@ $probiotics-bg: #3a77c8;
   .name {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 0.98;
     letter-spacing: 0.35px;
   }
+}
+
+.card--probiotics .product-title {
+  left: auto;
+  right: 150%;
 }
 
 .card--repel .product-title {

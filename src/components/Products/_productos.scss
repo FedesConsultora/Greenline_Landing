@@ -340,9 +340,9 @@ $probiotics-bg: #3a77c8;
     padding-bottom: 16rem;
   }
 }
-@media (min-width: 462px) and (max-width: 662px) {
+@media (min-width: 462px) and (max-width: 480px) {
   .productos__intro .intro__dog {
-    bottom: -92px;
+    bottom: -72px;
     transform: translate(-50%, 4px);
     -webkit-transform: translate(-50%, 4px);
     -moz-transform: translate(-50%, 4px);
@@ -353,7 +353,66 @@ $probiotics-bg: #3a77c8;
     padding-bottom: 16rem;
   }
 }
-
+@media (min-width: 481px) and (max-width: 510px) {
+  .productos__intro .intro__dog {
+    bottom: -77px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+}
+@media (min-width: 520px) and (max-width: 530px) {
+  .productos__intro .intro__dog {
+    bottom: -80px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+}
+@media (min-width: 530px) and (max-width: 550px) {
+  .productos__intro .intro__dog {
+    bottom: -84px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+}
+@media (min-width: 550px) and (max-width: 580px) {
+  .productos__intro .intro__dog {
+    bottom: -89px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+}
+@media (min-width: 581px) and (max-width: 604px) {
+  .productos__intro .intro__dog {
+    bottom: -92px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+}
+@media (min-width: 605px) and (max-width: 680px) {
+  .productos__intro .intro__dog {
+    bottom: -96px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+}
 @media (min-width: 681px) and (max-width: 719px) {
   .productos__intro .intro__dog {
     bottom: -100px;

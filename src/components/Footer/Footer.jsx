@@ -10,8 +10,8 @@ import "../Footer/_footer.scss";
 
 export default function Footer({ id }) {
   return (
-    <footer class="footer" id={id}>
-      <div class="footer-content">
+    <footer className="footer" id={id}>
+      <div className="footer-content">
         <div className="footer-top">
           <h1>
             Amarlos es <br /> <strong>cuidarlos</strong>
@@ -35,7 +35,7 @@ export default function Footer({ id }) {
           </div>
         </div>
 
-        <div class="footer-links">
+        <div className="footer-links">
           <div>
             {" "}
             <MdOutlinePhone

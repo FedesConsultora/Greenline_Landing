@@ -2,6 +2,7 @@ import { useState } from "react";
 import RepelLogo from "../../assets/img/Green Line RAPEL-02 1.webp";
 import Repel from "../../assets/img//repel1-1.webp";
 import "./_repelProduct.scss";
+import ScrollStrip from "../common/ScrollStrip";
 
 export default function RepelProduct({ id }) {
   const [activeSection, setActiveSection] = useState("ventajas");
@@ -60,10 +61,14 @@ export default function RepelProduct({ id }) {
         </h2>
 
         <div className="repel-divider">
-          <div>
-            <h2>Protección natural para tu familia y tu hogar.</h2>
-          </div>
+          <ScrollStrip
+            text="Protección natural para tu familia y tu hogar."
+            speed={60}
+            direction="left"
+            as="h2"
+          />
         </div>
+
 
         <div className="repel-info">
           <h3>El complemento ideal y natural</h3>

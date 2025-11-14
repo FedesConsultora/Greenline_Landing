@@ -43,8 +43,41 @@
       max-width: 600px;
     }
   }
-
-  @media (min-width: 1024px) {
+  @media (min-width: 600px) {
+    background-image: url("../../assets//img/background-desktop.webp");
     background-attachment: fixed;
+  }
+  @media (min-width: 1024px) {
+    text-align: center;
+    padding: 1px !important;
+    justify-content: flex-start;
+    position: relative;
+
+    align-items: center;
+    &__title {
+      position: relative;
+      color: #f0f1f0;
+      text-align: left;
+      font-weight: 900;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      top: 120px;
+      left: 140px;
+    }
+
+    &__subtitle {
+      position: relative;
+      color: #f0f1f0;
+      text-align: left;
+      line-height: 1.8rem;
+      font-size: 1.3rem !important;
+      top: 130px;
+      left: 140px;
+    }
+    background-image: url("../../assets//img/background-desktop.webp");
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
+    background-size: 130%;
   }
 }

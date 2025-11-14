@@ -43,23 +43,25 @@ export default function ProbioticProduct({ id }) {
       label: "COMO FUNCIONA",
       title: "Cómo actúa GreenLine PROBIOTICS",
       content: (
-        <ul className="como-funciona">
-          <li>
-            <div>
-              <strong>1. Coloniza</strong> el intestino
-            </div>
-          </li>
-          <li>
-            <div>
-              <strong>2. Restaura</strong> el equilibrio microbiano
-            </div>
-          </li>
-          <li>
-            <div>
-              <strong>3. Refuerza</strong> inmunidad y digestión
-            </div>
-          </li>
-        </ul>
+        <>
+          <ul className="como-funciona">
+            <li>
+              <div>
+                <strong>1. Coloniza</strong> el intestino
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>2. Restaura</strong> el equilibrio microbiano
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>3. Refuerza</strong> inmunidad y digestión
+              </div>
+            </li>
+          </ul>
+        </>
       ),
     },
   };
@@ -128,9 +130,30 @@ export default function ProbioticProduct({ id }) {
         </div>
 
         <div className="probiotics-dynamic-section">
-          <h1>{sections[activeSection].title}</h1>
+          <h1>
+            {sections[activeSection].title.includes("GreenLine PROBIOTICS") ? (
+              <>
+                <p>
+                  {
+                    sections[activeSection].title.split(
+                      "GreenLine PROBIOTICS"
+                    )[0]
+                  }
+                  <strong>GreenLine PROBIOTICS</strong>
+                  {
+                    sections[activeSection].title.split(
+                      "GreenLine PROBIOTICS"
+                    )[1]
+                  }
+                </p>
+              </>
+            ) : (
+              sections[activeSection].title
+            )}
+          </h1>
           {sections[activeSection].content}
         </div>
+
         <div className="divider-prod">
           <div>
             {" "}

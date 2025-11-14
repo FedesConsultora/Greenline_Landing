@@ -129,7 +129,7 @@ export default function Footer({ id }) {
               href="https://www.fatrovonfranken.com/productos/animales-de-compania/"
             >
               <img
-                style={{ paddingLeft: "0.5rem", top: "2rem", width: '70px' }}
+                style={{ paddingLeft: "0.5rem", top: "2rem", width: '70px', cursor:'pointer' }}
                 src={VFLogo}
                 
                 alt="Von Franken"

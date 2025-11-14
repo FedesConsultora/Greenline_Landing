@@ -1,6 +1,8 @@
 import { useState } from "react";
 import RepelLogo from "../../assets/img/Green Line RAPEL-02 1.webp";
 import Repel from "../../assets/img//repel1-1.webp";
+import Logo1 from "../../assets/img/logoRep1.webp";
+import Logo2 from "../../assets/img/LogoRep2.webp";
 import "./_repelProduct.scss";
 
 export default function RepelProduct({ id }) {
@@ -72,6 +74,10 @@ export default function RepelProduct({ id }) {
             Su fórmula posee extractos y aceites vegetales, saludables para tu
             mascota.
           </h2>
+          <div>
+            <img src={Logo2} alt="" />
+            <img src={Logo1} alt="" />
+          </div>
 
           <div className="prod-buttons">
             {Object.keys(sections).map((key) => (

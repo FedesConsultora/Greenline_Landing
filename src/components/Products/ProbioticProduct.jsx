@@ -3,7 +3,10 @@ import GreenlineProbioticsDouble from "../../assets/img//Green-Line-PROBIOTICS-D
 import GreenlineProbiotics from "../../assets//img//Green Line PROBIOTICS 1.png";
 import Probiotics from "../../assets/img/Group-2.webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";
-
+import Logo1 from "../../assets/img/Logopro1.webp";
+import Logo2 from "../../assets/img//LogoPro2.webp";
+import Logo3 from "../../assets/img//logoPro3.webp";
+import Logo4 from "../../assets/img//logoPro4.webp";
 import "./_probioticProduct.scss";
 
 export default function ProbioticProduct({ id }) {
@@ -86,6 +89,13 @@ export default function ProbioticProduct({ id }) {
             Su fórmula está compuesta por bacterias, levaduras y enzimas de alta
             efectividad, específicas para la microbiota de perros y gatos.
           </h2>
+
+          <div>
+            <img src={Logo1} alt="" />
+            <img src={Logo2} alt="" />
+            <img src={Logo3} alt="" />
+            <img src={Logo4} alt="" />
+          </div>
 
           <div className="prod-buttons">
             {Object.keys(sections).map((key) => (

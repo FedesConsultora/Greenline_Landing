@@ -327,9 +327,35 @@ $probiotics-bg: #3a77c8;
   }
 }
 
-@media (min-width: 401px) and (max-width: 680px) {
+@media (min-width: 401px) and (max-width: 420px) {
   .productos__intro .intro__dog {
-    bottom: -70px;
+    bottom: -62px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+  .productos__intro .intro__copy {
+    padding-bottom: 16rem;
+  }
+}
+@media (min-width: 421px) and (max-width: 430px) {
+  .productos__intro .intro__dog {
+    bottom: -65px;
+    transform: translate(-50%, 4px);
+    -webkit-transform: translate(-50%, 4px);
+    -moz-transform: translate(-50%, 4px);
+    -ms-transform: translate(-50%, 4px);
+    -o-transform: translate(-50%, 4px);
+  }
+  .productos__intro .intro__copy {
+    padding-bottom: 16rem;
+  }
+}
+@media (min-width: 431px) and (max-width: 461px) {
+  .productos__intro .intro__dog {
+    bottom: -68px;
     transform: translate(-50%, 4px);
     -webkit-transform: translate(-50%, 4px);
     -moz-transform: translate(-50%, 4px);

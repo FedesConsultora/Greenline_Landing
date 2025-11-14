@@ -42,10 +42,22 @@ export default function ProbioticProduct({ id }) {
       label: "COMO FUNCIONA",
       title: "Cómo actúa GreenLine PROBIOTICS",
       content: (
-        <ul>
-          <li>• Coloniza el intestino</li>
-          <li>• Restaura el equilibrio microbiano</li>
-          <li>• Refuerza inmunidad y digestión</li>
+        <ul className="como-funciona">
+          <li>
+            <div>
+              <strong>1. Coloniza</strong> el intestino
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>2. Restaura</strong> el equilibrio microbiano
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>3. Refuerza</strong> inmunidad y digestión
+            </div>
+          </li>
         </ul>
       ),
     },

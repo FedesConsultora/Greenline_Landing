@@ -7,23 +7,67 @@ import Pino from "../../assets/img/pino.webp";
 import Eucalipto from "../../assets/img/eucalipto.webp";
 import Almendra from "../../assets/img/almendra.webp";
 import Neem from "../../assets/img/neem.webp";
+import Presentaciones from "../../assets/img/presentaciones.webp";
 import "./_repelProduct.scss";
 
 export default function RepelProduct({ id }) {
-  const [activeSection, setActiveSection] = useState("ventajas");
+  const [activeSection, setActiveSection] = useState("presentaciones");
 
   const sections = {
+    presentaciones: {
+      title: "Presentaciones GreenLine Repel",
+      content: (
+        <>
+          <div className="presentaciones-img">
+            <img src={Presentaciones} alt="Presentaciones de Repel" />
+          </div>
+          <ul style={{ display: "flex", flexDirection: "column" }}>
+            <li>
+              <p className="text">
+                <strong>Emulsión en spray</strong> indicada para ayudar a
+                repeler insectos que afecten a perros y gatos.
+                <br />
+                <span className="pr">Presentación de 125ml.</span>
+              </p>
+            </li>
+            <li>
+              <p className="text">
+                <strong>Ampolla/Pipeta</strong> indicada para ayudar a mantener
+                alejados insectos molestos como pulgas, moscas, mosquitos,
+                flebótomos, etc., que afectan a perros.
+                <br />
+                <span className="pr">
+                  Presentación para perros pequeños, medianos y grandes.
+                </span>
+              </p>
+            </li>
+            <li>
+              <p className="text">
+                <strong>Spray ambiental</strong> indicado para el control de
+                piojos, pulgas, garrapatas, ácaros y otros insectos en cercanía
+                de cuchas, caniles, alfombras, pisos, zócalos u otros lugares
+                donde habitan mascotas.
+                <br />
+                <span className="pr">Presentación de 250 ml.</span>
+              </p>
+            </li>
+          </ul>
+        </>
+      ),
+    },
     ventajas: {
       title: "Por qué GreenLine Repel",
       content: (
-        <ul>
-          <li>• Mantiene alejado a los insectos molestos.</li>
-          <li>• Tratamiento natural contra pulgas, garrapatas y ácaros. </li>
-          <li>• Protección para tu perro, gato y a tu hogar.</li>
-          <li>
-            • Sus componentes naturales le dejan el pelo brillante y sedoso.
-          </li>
-        </ul>
+        <div className="ventajas-repel">
+          <ul>
+            <li>• Mantiene alejado a los insectos molestos.</li>
+            <li>• Tratamiento natural contra pulgas, garrapatas y ácaros. </li>
+            <li>• Protección para tu perro, gato y a tu hogar.</li>
+            <li>
+              • Sus componentes naturales le dejan el pelo brillante y sedoso.
+            </li>
+          </ul>
+        </div>
       ),
     },
 

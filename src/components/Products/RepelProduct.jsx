@@ -166,9 +166,18 @@ export default function RepelProduct({ id }) {
             ))}
           </div>
         </div>
-
         <div className="repel-dynamic-section">
-          <h1>{sections[activeSection].title}</h1>
+          <h1>
+            {sections[activeSection].title.includes("GreenLine Repel") ? (
+              <p>
+                {sections[activeSection].title.split("GreenLine Repel")[0]}
+                <strong>GreenLine Repel</strong>
+                {sections[activeSection].title.split("GreenLine Repel")[1]}
+              </p>
+            ) : (
+              sections[activeSection].title
+            )}
+          </h1>
           {sections[activeSection].content}
         </div>
       </div>

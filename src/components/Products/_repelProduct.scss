@@ -71,7 +71,16 @@
       padding: 1.5rem;
     }
   }
+  .repel-dynamic-section h1 p {
+    display: inline; // para que todo quede en línea
+    font-weight: 400;
+  }
 
+  .repel-dynamic-section h1 strong {
+    text-transform: capitalize;
+    font-weight: 700; // negrita
+    color: inherit; // mantiene color del h1
+  }
   .repel-dynamic-section {
     display: flex;
     flex-direction: column;
@@ -87,6 +96,7 @@
       text-align: start;
       padding-bottom: 1.5rem;
     }
+
     ul {
       list-style-type: none;
       li {

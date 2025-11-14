@@ -104,8 +104,20 @@
     h1 {
       display: flex;
       text-align: start;
+      font-weight: 400;
       color: #2d6bc8;
     }
+    .probiotics-dynamic-section h1 p {
+      display: inline;
+      font-weight: normal;
+    }
+
+    .probiotics-dynamic-section h1 strong {
+      font-weight: 700;
+      color: inherit;
+      text-transform: capitalize;
+    }
+
     ul {
       list-style-type: none;
       li {

@@ -15,11 +15,25 @@
     align-items: center !important;
     justify-content: center !important;
     padding: 2rem;
-    img {
+    .desktop-img {
+      display: block;
       padding: 2rem;
-      display: block !important;
-      height: auto;
     }
+
+    .mobile-img {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-img {
+        display: none;
+      }
+      .mobile-img {
+        display: block;
+        padding: 2rem;
+      }
+    }
+
     h1 {
       font-size: 2rem;
       color: #2d6bc8;
@@ -36,7 +50,7 @@
     }
     h3 {
       font-size: 1.5rem;
-      font-weight: 500;
+      font-weight: 600;
       color: #2d6bc8;
     }
   }
@@ -47,9 +61,10 @@
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
+
     h3 {
       font-size: 1.2rem;
-      font-weight: 500;
+      font-weight: 600;
       color: #2d6bc8;
       padding-top: 1rem;
     }
@@ -76,7 +91,7 @@
     justify-content: flex-start;
     padding: 2rem;
     margin: 0rem 2rem 2rem 2rem;
-    border-radius: 3rem;
+    border-radius: 2rem;
     background-color: #f6f5f5;
 
     h1 {
@@ -99,13 +114,18 @@
   .prod-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
     justify-content: center;
-
+    gap: 1rem 1rem;
+    max-width: 500px;
+    padding: 1rem 2rem;
+    margin: 0rem 2rem;
+    align-items: center;
+    width: 100%;
     button {
-      margin-top: 1rem;
-      padding: 8px 16px 6px 16px;
+      flex: 1 1 120px;
+      min-width: 130px;
+      max-width: 150px;
+      padding: 8px 10px;
       background-color: #2d6bc8;
       color: #fff;
       border: none;
@@ -113,7 +133,7 @@
       cursor: pointer;
       font-weight: 400;
       transition: background 0.3s;
-      justify-items: center;
+      white-space: nowrap;
 
       &.active {
         background-color: #2d6bc8;
@@ -138,12 +158,12 @@
       display: inline-block;
       white-space: nowrap;
       width: 200%;
-      animation: moveRight 15s linear infinite;
+      animation: moveLeft 15s linear infinite;
 
       h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         text-align: center;
-        color: #82b9da;
+        color: #fff;
         margin: 1rem 0rem 0rem 0rem;
       }
     }
@@ -163,12 +183,12 @@
     }
   }
 
-  @keyframes moveRight {
+  @keyframes moveLeft {
     0% {
-      transform: translateX(-600px);
+      transform: translateX(700px);
     }
     100% {
-      transform: translateX(600px);
+      transform: translateX(-700px);
     }
   }
 }

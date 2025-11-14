@@ -13,7 +13,7 @@ export default function Hero({ id }) {
             ser natural.
           </h1>
           <p className="hero__subtitle">
-            Un perro o un gato son más que compañeros:{" "}
+            Un perro o un gato son más que <br /> compañeros:{" "}
             <strong> son nuestra familia.</strong>
           </p>
         </div>

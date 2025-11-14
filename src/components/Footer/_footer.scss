@@ -106,17 +106,18 @@
 
     .footer-end {
       padding-top: 1rem;
-      p {
+      a {
+        text-decoration: none;
         font-size: 0.9rem;
         font-weight: 400;
         margin: 0;
       }
 
-      p:first-child {
+      a:first-child {
         color: #fff;
       }
 
-      p:last-child {
+      a:last-child {
         color: #669701;
       }
     }

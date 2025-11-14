@@ -18,13 +18,13 @@
     div {
       display: inline-block;
       white-space: nowrap;
-      animation: moveRight 15s linear infinite;
+      animation: moveLeft 15s linear infinite;
 
       h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 600;
         text-align: center;
-        color: #ffa77a;
+        color: #fff;
         margin: 1.8rem 0rem 0rem 0rem;
       }
     }
@@ -72,7 +72,7 @@
     justify-content: flex-start;
     padding: 2rem;
     margin: 0rem 2rem 2rem 2rem;
-    border-radius: 3rem;
+    border-radius: 2rem;
     background-color: #f6f5f5;
 
     h1 {
@@ -93,23 +93,27 @@
   }
   .prod-buttons {
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-
+    gap: 1rem 1.5rem;
+    max-width: 500px;
+    padding: 1rem 2rem;
+    margin: 0rem 2rem;
+    align-items: center;
+    width: 100%;
     button {
-      margin-top: 2rem;
-
-      padding: 10px 16px 8px 16px;
-      background-color: #ff8040;
+      flex: 1 1 120px;
+      min-width: 130px;
+      max-width: 150px;
+      padding: 8px 10px;
+      background-color: #2d6bc8;
       color: #fff;
       border: none;
       border-radius: 1rem;
       cursor: pointer;
       font-weight: 400;
       transition: background 0.3s;
-      justify-items: center;
+      white-space: nowrap;
 
       &.active {
         background-color: #ff8040;
@@ -124,11 +128,11 @@
   }
 }
 
-@keyframes moveRight {
+@keyframes moveLeft {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(700px);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-700px);
   }
 }

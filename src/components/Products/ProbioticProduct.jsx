@@ -1,5 +1,6 @@
 import { useState } from "react";
-import GreenlineProbiotics from "../../assets/img/Green Line PROBIOTICS 1.png";
+import GreenlineProbioticsDouble from "../../assets/img//Green-Line-PROBIOTICS-DOUBLE.webp";
+import GreenlineProbiotics from "../../assets//img//Green Line PROBIOTICS 1.png";
 import Probiotics from "../../assets/img/Group-2.webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";
 
@@ -15,7 +16,7 @@ export default function ProbioticProduct({ id }) {
       content: (
         <ul>
           <li>• Alta concentración de cepas</li>
-          <li>• Rico sabor!</li>
+          <li>• ¡Rico sabor!</li>
           <li>• Fácil de administrar con su jeringa dosificadora</li>
           <li>• Para todas las edades</li>
         </ul>
@@ -51,14 +52,24 @@ export default function ProbioticProduct({ id }) {
     <section id={id}>
       <div className="probiotics__main">
         <div className="probiotics-presentation">
-          <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
+          <img
+            className="desktop-img"
+            src={GreenlineProbiotics}
+            alt="GreenLine Probiotics"
+          />
+          {/* Imagen para mobile */}
+          <img
+            className="mobile-img"
+            src={GreenlineProbioticsDouble}
+            alt="GreenLine Probiotics Double"
+          />
           <img src={Probiotics} alt="Packaging Probiotics" />
           <h1>Lo que no ves, también importa</h1>
           <h2>
             La microbiota intestinal es un ecosistema vivo: millones de
             bacterias buenas trabajan en armonía para proteger el organismo,
             mejorar la absorción de nutrientes y fortalecer las defensas.
-            Cuidarla es acompañar su bienestar
+            Cuidarla es acompañar su bienestar, todos los días.
           </h2>
         </div>
 
@@ -69,14 +80,13 @@ export default function ProbioticProduct({ id }) {
         </div>
 
         <div className="probiotics-info">
-          <h3>Protege lo que no se ve</h3>
-          <h1>Cuida su microbiota</h1>
+          <h3>Protegé lo que no se ve</h3>
+          <h1>cuidá su microbiota</h1>
           <h2>
             Su fórmula está compuesta por bacterias, levaduras y enzimas de alta
             efectividad, específicas para la microbiota de perros y gatos.
           </h2>
-          <div>Logos</div>
-          <img src={GreenlineProbiotics} alt="GreenLine Probiotics" />
+
           <div className="prod-buttons">
             {Object.keys(sections).map((key) => (
               <button

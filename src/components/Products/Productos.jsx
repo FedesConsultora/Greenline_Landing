@@ -137,8 +137,8 @@ export default function Productos({ id }) {
           </strong>
         </h2>
         <p className="intro__lead">
-          Conformada por productos con componentes de origen natural, que ayudan
-          a prevenir y potenciar tratamientos, de una forma natural.
+          Conformada por productos <br /> con componentes de origen <br />{" "}
+          natural que ayudan a <br /> prevenir y potenciar <br /> tratamientos.
         </p>
       </div>
 
@@ -234,6 +234,14 @@ export default function Productos({ id }) {
             />
           </div>
         </article>
+      </div>
+      <div class="main-divider">
+        <div
+          class="scroll"
+          data-text="Porque lo primero es PREVENIR, y eso también es cuidarlos. "
+        >
+          <p>Porque lo primero es PREVENIR, y eso también es cuidarlos.</p>
+        </div>
       </div>
     </section>
   );

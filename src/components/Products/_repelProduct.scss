@@ -63,6 +63,13 @@
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
   }
 
   .repel-dynamic-section {
@@ -70,7 +77,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 2rem 2rem 0rem 2rem;
     margin: 0rem 2rem 2rem 2rem;
     border-radius: 2rem;
     background-color: #f6f5f5;
@@ -78,6 +85,7 @@
     h1 {
       display: flex;
       text-align: start;
+      padding-bottom: 1.5rem;
     }
     ul {
       list-style-type: none;
@@ -91,6 +99,61 @@
       }
     }
   }
+  .repel-dynamic-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .repel-dynamic-section .ventajas-repel ul {
+    display: flex;
+    flex-direction: column; /* columna en lugar de fila */
+    gap: 0.8rem; /* espacio entre los items */
+  }
+
+  .repel-dynamic-section .ventajas-repel ul li {
+    display: block; /* cada item en su propia línea */
+  }
+
+  .repel-dynamic-section ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    color: #4c4c4c;
+  }
+  .repel-dynamic-section ul li .text {
+    display: block;
+    flex: 1;
+    line-height: 1.8rem;
+  }
+
+  .repel-dynamic-section .presentaciones-img {
+    padding: 2rem;
+  }
+
+  .repel-dynamic-section strong {
+    text-transform: uppercase;
+  }
+
+  .repel-dynamic-section ul li div {
+    flex-shrink: 0;
+  }
+
+  .repel-dynamic-section ul li img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-right: 1.5rem;
+  }
+
+  .repel-dynamic-section ul li .text .pr {
+    display: block;
+    color: #7ebc00;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
   .prod-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +165,7 @@
     align-items: center;
     width: 100%;
     button {
-      flex: 1 1 120px;
+      flex: 1 1 124px;
       min-width: 130px;
       max-width: 150px;
       padding: 8px 10px;
@@ -125,6 +188,59 @@
         transition: none;
       }
     }
+  }
+}
+@media (min-width: 300px) and (max-width: 560px) {
+  .prod-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+
+    button {
+      flex: 1 1 auto;
+      min-width: 126px;
+    }
+
+    button:first-child {
+      width: 100%;
+      flex-basis: 100% !important;
+      order: 0;
+    }
+
+    button:nth-child(n + 2) {
+      flex-basis: 45% !important;
+      order: 1;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .repel-dynamic-section {
+    padding: 2rem; // menos padding para que entre en pantalla
+    margin: 0 2rem 2rem 2rem !important; // ajustar márgenes
+    width: calc(100% - 2rem); // que ocupe todo el ancho disponible
+    box-sizing: border-box; // para que padding no sume al ancho
+  }
+
+  .repel-dynamic-section h1 {
+    font-size: 1.5rem; // ajustar título
+  }
+  .repel-dynamic-section h2 {
+    font-size: 1.3rem; // ajustar título
+  }
+
+  .repel-dynamic-section ul {
+    gap: 1rem; // reducir separación entre items
+    flex-direction: column; // asegurar columna si era fila
+  }
+
+  .repel-dynamic-section ul li img {
+    width: 40px; // reducir tamaño de imágenes
+    height: 40px;
+  }
+  .repel-dynamic-section .presentaciones-img img {
+    padding: 1rem 4rem 1rem 0rem;
+    position: relative;
   }
 }
 

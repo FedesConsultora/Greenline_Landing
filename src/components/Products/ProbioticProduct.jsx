@@ -3,7 +3,10 @@ import GreenlineProbioticsDouble from "../../assets/img//Green-Line-PROBIOTICS-D
 import GreenlineProbiotics from "../../assets//img//Green Line PROBIOTICS 1.png";
 import Probiotics from "../../assets/img/Group-2.webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";
-
+import Logo1 from "../../assets/img/Logopro1.webp";
+import Logo2 from "../../assets/img//LogoPro2.webp";
+import Logo3 from "../../assets/img//logoPro3.webp";
+import Logo4 from "../../assets/img//logoPro4.webp";
 import "./_probioticProduct.scss";
 
 export default function ProbioticProduct({ id }) {
@@ -39,10 +42,22 @@ export default function ProbioticProduct({ id }) {
       label: "COMO FUNCIONA",
       title: "Cómo actúa GreenLine PROBIOTICS",
       content: (
-        <ul>
-          <li>• Coloniza el intestino</li>
-          <li>• Restaura el equilibrio microbiano</li>
-          <li>• Refuerza inmunidad y digestión</li>
+        <ul className="como-funciona">
+          <li>
+            <div>
+              <strong>1. Coloniza</strong> el intestino
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>2. Restaura</strong> el equilibrio microbiano
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>3. Refuerza</strong> inmunidad y digestión
+            </div>
+          </li>
         </ul>
       ),
     },
@@ -86,6 +101,13 @@ export default function ProbioticProduct({ id }) {
             Su fórmula está compuesta por bacterias, levaduras y enzimas de alta
             efectividad, específicas para la microbiota de perros y gatos.
           </h2>
+
+          <div>
+            <img src={Logo1} alt="" />
+            <img src={Logo2} alt="" />
+            <img src={Logo3} alt="" />
+            <img src={Logo4} alt="" />
+          </div>
 
           <div className="prod-buttons">
             {Object.keys(sections).map((key) => (

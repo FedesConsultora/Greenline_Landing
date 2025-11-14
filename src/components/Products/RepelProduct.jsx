@@ -1,47 +1,119 @@
 import { useState } from "react";
 import RepelLogo from "../../assets/img/Green Line RAPEL-02 1.webp";
 import Repel from "../../assets/img//repel1-1.webp";
+import Logo1 from "../../assets/img/logoRep1.webp";
+import Logo2 from "../../assets/img/LogoRep2.webp";
+import Pino from "../../assets/img/pino.webp";
+import Eucalipto from "../../assets/img/eucalipto.webp";
+import Almendra from "../../assets/img/almendra.webp";
+import Neem from "../../assets/img/neem.webp";
+import Presentaciones from "../../assets/img/presentaciones.webp";
 import "./_repelProduct.scss";
 
 export default function RepelProduct({ id }) {
-  const [activeSection, setActiveSection] = useState("ventajas");
+  const [activeSection, setActiveSection] = useState("presentaciones");
 
   const sections = {
+    presentaciones: {
+      title: "Presentaciones GreenLine Repel",
+      content: (
+        <>
+          <div className="presentaciones-img">
+            <img src={Presentaciones} alt="Presentaciones de Repel" />
+          </div>
+          <ul style={{ display: "flex", flexDirection: "column" }}>
+            <li>
+              <p className="text">
+                <strong>Emulsión en spray</strong> indicada para ayudar a
+                repeler insectos que afecten a perros y gatos.
+                <br />
+                <span className="pr">Presentación de 125ml.</span>
+              </p>
+            </li>
+            <li>
+              <p className="text">
+                <strong>Ampolla/Pipeta</strong> indicada para ayudar a mantener
+                alejados insectos molestos como pulgas, moscas, mosquitos,
+                flebótomos, etc., que afectan a perros.
+                <br />
+                <span className="pr">
+                  Presentación para perros pequeños, medianos y grandes.
+                </span>
+              </p>
+            </li>
+            <li>
+              <p className="text">
+                <strong>Spray ambiental</strong> indicado para el control de
+                piojos, pulgas, garrapatas, ácaros y otros insectos en cercanía
+                de cuchas, caniles, alfombras, pisos, zócalos u otros lugares
+                donde habitan mascotas.
+                <br />
+                <span className="pr">Presentación de 250 ml.</span>
+              </p>
+            </li>
+          </ul>
+        </>
+      ),
+    },
     ventajas: {
       title: "Por qué GreenLine Repel",
       content: (
-        <ul>
-          <li>• Mantiene alejado a los insectos molestos.</li>
-          <li>• Tratamiento natural contra pulgas, garrapatas y ácaros. </li>
-          <li>• Protección para tu perro, gato y a tu hogar.</li>
-          <li>
-            • Sus componentes naturales le dejan el pelo brillante y sedoso.
-          </li>
-        </ul>
+        <div className="ventajas-repel">
+          <ul>
+            <li>• Mantiene alejado a los insectos molestos.</li>
+            <li>• Tratamiento natural contra pulgas, garrapatas y ácaros. </li>
+            <li>• Protección para tu perro, gato y a tu hogar.</li>
+            <li>
+              • Sus componentes naturales le dejan el pelo brillante y sedoso.
+            </li>
+          </ul>
+        </div>
       ),
     },
 
     ingredientes: {
       title: "Qué contiene GreenLine Repel",
       content: (
-        <ul>
+        <ul style={{ display: "flex", flexDirection: "column" }}>
           <li>
-            • El Aceite de eucalipto muestra resultados promisorios en el
-            control de diversos insectos.
+            <div>
+              <img src={Eucalipto} alt="" />
+            </div>
+            <p className="text">
+              <strong>El Aceite de eucalipto</strong> muestra resultados
+              promisorios en el control de diversos insectos.
+            </p>
           </li>
           <li>
-            • El Aceite de pino ha demostrado actividad larvicida y repelente
-            frente a mosquitos y otros insectos.
+            <div>
+              {" "}
+              <img src={Pino} alt="" />
+            </div>
+            <p className="text">
+              <strong>El Aceite de pino</strong> ha demostrado actividad
+              larvicida y repelente frente a mosquitos y otros insectos.
+            </p>
           </li>
           <li>
-            • El Aceite de neem es un repelente natural que ayuda a mantener
-            alejados los insectos molestos como: pulgas, moscas, mosquitos,
-            flebótomos, etc.
+            <div>
+              {" "}
+              <img src={Neem} alt="" />
+            </div>
+            <p className="text">
+              <strong>El Aceite de neem</strong> es un repelente natural que
+              ayuda a mantener alejados los insectos molestos como: pulgas,
+              moscas, mosquitos, flebótomos, etc.
+            </p>
           </li>
           <li>
-            • El Aceite de almendras es fuente natural de Vitamina E, con
-            propiedades emolientes e hidratantes para la piel, da brillo y
-            suavidad al pelo.
+            <div>
+              <img src={Almendra} alt="" />
+            </div>
+            <p className="text">
+              <strong>El Aceite de almendras</strong> es fuente natural de
+              Vitamina E, con propiedades emolientes e hidratantes para la piel,
+              da brillo y suavidad al pelo.
+            </p>
           </li>
         </ul>
       ),
@@ -72,6 +144,10 @@ export default function RepelProduct({ id }) {
             Su fórmula posee extractos y aceites vegetales, saludables para tu
             mascota.
           </h2>
+          <div>
+            <img src={Logo2} alt="" />
+            <img src={Logo1} alt="" />
+          </div>
 
           <div className="prod-buttons">
             {Object.keys(sections).map((key) => (

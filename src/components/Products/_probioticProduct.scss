@@ -62,6 +62,13 @@
     justify-content: center;
     padding-top: 1rem;
 
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1rem 1rem 2rem 1rem;
+    }
+
     h3 {
       font-size: 1.2rem;
       font-weight: 600;
@@ -73,10 +80,10 @@
       color: #2d6bc8;
       text-align: center;
       margin: 0;
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
     }
     h2 {
-      padding: 0rem 2rem 2rem 2rem;
+      padding: 0rem 2rem 0rem 2rem;
       font-size: 1.2rem;
       font-weight: 400;
       color: #3c3c3b;
@@ -109,6 +116,12 @@
         font-size: 1.2rem;
         color: #4c4c4c;
       }
+    }
+
+    .probiotics-dynamic-section .como-funciona li div {
+      display: flex;
+      gap: 4rem;
+      line-height: 2rem;
     }
   }
   .prod-buttons {
@@ -169,17 +182,20 @@
     }
   }
   .divider-prod {
-    background-image: url("../../assets//img//divider.webp");
+    background-image: url("../../assets//img//eb51d7a5db312bf71af26d73652c6dc4a6e0d263.webp");
     background-size: cover;
+    background-position: center;
     width: 100%;
     min-height: 200px;
     margin-bottom: 4rem;
 
     img {
-      transform: scale(1.4);
-
-      margin-left: 3rem;
-      margin-top: 4rem;
+      width: 48%; // la imagen ahora se achica según el ancho del contenedor
+      max-width: 400px;
+      min-width: 100px;
+      position: relative;
+      top: 60px;
+      left: 52%;
     }
   }
 

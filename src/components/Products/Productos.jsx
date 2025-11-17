@@ -8,6 +8,7 @@ import PawsWebm from "../../assets/video/huellitas.webm";
 import PawsMp4 from "../../assets/video/huellitas.mp4";
 import PawsFallback from "../../assets/img/huellitas.webp";
 import "./_productos.scss";
+import ScrollStrip from "../common/ScrollStrip";
 
 const headerH = () => document.querySelector(".navbar")?.offsetHeight || 0;
 
@@ -235,13 +236,12 @@ export default function Productos({ id }) {
           </div>
         </article>
       </div>
-      <div class="main-divider">
-        <div
-          class="scroll"
-          data-text="Porque lo primero es PREVENIR, y eso también es cuidarlos. "
-        >
-          <p>Porque lo primero es PREVENIR, y eso también es cuidarlos.</p>
-        </div>
+      <div className="main-divider">
+        <ScrollStrip
+          text="Porque lo primero es PREVENIR, y eso también es cuidarlos."
+          speed={60}        // ajustás velocidad fácil
+          direction="left"  // derecha -> izquierda
+        />
       </div>
     </section>
   );

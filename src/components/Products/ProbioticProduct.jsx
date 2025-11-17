@@ -7,6 +7,7 @@ import Logo1 from "../../assets/img//pasta palatable.svg";
 import Logo2 from "../../assets/img//todas las edades.svg";
 import Logo3 from "../../assets/img//balance digestivo.svg";
 import Logo4 from "../../assets/img//sistema inmune.svg";
+import ScrollStrip from "../common/ScrollStrip";
 import "./_probioticProduct.scss";
 
 export default function ProbioticProduct({ id }) {
@@ -97,10 +98,14 @@ export default function ProbioticProduct({ id }) {
         </div>
 
         <div className="probiotics-divider">
-          <div>
-            <h2>Su bienestar empieza por dentro</h2>
-          </div>
+          <ScrollStrip
+            text="Su bienestar empieza por dentro"
+            speed={60}
+            direction="left"
+            as="h2"
+          />
         </div>
+
 
         <div className="probiotics-info">
           <h3>Protegé lo que no se ve</h3>

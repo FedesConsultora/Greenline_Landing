@@ -9,6 +9,7 @@ import Almendra from "../../assets/img//aceite de almendras.svg";
 import Neem from "../../assets/img//aceite de neem.svg";
 import Presentaciones from "../../assets/img/presentaciones.webp";
 import "./_repelProduct.scss";
+import ScrollStrip from "../common/ScrollStrip";
 
 export default function RepelProduct({ id }) {
   const [activeSection, setActiveSection] = useState("presentaciones");
@@ -132,10 +133,14 @@ export default function RepelProduct({ id }) {
         </h2>
 
         <div className="repel-divider">
-          <div>
-            <h2>Protección natural para tu familia y tu hogar.</h2>
-          </div>
+          <ScrollStrip
+            text="Protección natural para tu familia y tu hogar."
+            speed={60}
+            direction="left"
+            as="h2"
+          />
         </div>
+
 
         <div className="repel-info">
           <h3>El complemento ideal y natural</h3>

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import RepelLogo from "../../assets/img/Green Line RAPEL-02 1.webp";
-import Repel from "../../assets/img//repel1-1.webp";
-import Logo1 from "../../assets/img/logoRep1.webp";
-import Logo2 from "../../assets/img/LogoRep2.webp";
-import Pino from "../../assets/img/pino.webp";
-import Eucalipto from "../../assets/img/eucalipto.webp";
-import Almendra from "../../assets/img/almendra.webp";
-import Neem from "../../assets/img/neem.webp";
+import RepelLogo from "../../assets/img//repel-prod-logo.webp";
+import Repel from "../../assets/img//REPEL (1).webp";
+import Logo1 from "../../assets/img//extractos naturales.svg";
+import Logo2 from "../../assets/img//hogar seguro.svg";
+import Pino from "../../assets/img//aceite de pino.svg";
+import Eucalipto from "../../assets/img//aceite de eucalipto.svg";
+import Almendra from "../../assets/img//aceite de almendras.svg";
+import Neem from "../../assets/img//aceite de neem.svg";
 import Presentaciones from "../../assets/img/presentaciones.webp";
 import "./_repelProduct.scss";
 
@@ -123,7 +123,7 @@ export default function RepelProduct({ id }) {
   return (
     <section id={id}>
       <div className="repel__main">
-        <img src={RepelLogo} alt="GreenLine Repel" />
+        <img src={RepelLogo} alt="GreenLine Repel" className="logo-repel" />
         <img src={Repel} alt="Packaging Repel" />
         <h1>Protección natural contra insectos molestos.</h1>
         <h2>
@@ -144,9 +144,9 @@ export default function RepelProduct({ id }) {
             Su fórmula posee extractos y aceites vegetales, saludables para tu
             mascota.
           </h2>
-          <div>
-            <img src={Logo2} alt="" />
+          <div className="repel-logos">
             <img src={Logo1} alt="" />
+            <img className="logo2" src={Logo2} alt="" />
           </div>
 
           <div className="prod-buttons">

@@ -35,12 +35,16 @@
 
   @media (min-width: 768px) {
     &__title {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      top: 180px !important;
+      left: 80px !important;
     }
 
     &__subtitle {
-      font-size: 3rem !important;
+      font-size: 1rem !important;
       max-width: 600px;
+      top: 180px;
+      left: 80px;
     }
   }
   @media (min-width: 600px) {
@@ -59,20 +63,20 @@
       color: #f0f1f0;
       text-align: left;
       font-weight: 900;
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      top: 120px;
-      left: 140px;
+      top: 180px;
+      left: 80px;
     }
 
     &__subtitle {
       position: relative;
       color: #f0f1f0;
       text-align: left;
-      line-height: 1.8rem;
-      font-size: 1.3rem !important;
-      top: 130px;
-      left: 140px;
+      line-height: 1.5rem;
+      font-size: 1.5rem !important;
+      top: 170px;
+      left: 80px;
     }
     background-image: url("../../assets//img/background-desktop.webp");
     background-attachment: fixed;

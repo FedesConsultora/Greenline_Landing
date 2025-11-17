@@ -16,7 +16,33 @@ export default function Footer({ id }) {
           <h1>
             Amarlos es <br /> <strong>cuidarlos</strong>
           </h1>
-          <p>INFORMACIÓN DE CONTACTO</p>
+          <div className="footer-media">
+            <p>SEGUINOS</p>
+            <a
+              href="https://www.instagram.com/fatrovonfranken_pets/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={Instagram} alt="Instagram Logo" />
+            </a>
+
+            <a
+              href="https://www.facebook.com/FatroVonFranken"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={Facebook} alt="Facebook Logo" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/fatro-von-franken"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={Linkedin} alt="LinkedIn Logo" />
+            </a>
+          </div>
+
           <div>
             <h3>
               {" "}
@@ -92,33 +118,6 @@ export default function Footer({ id }) {
               consultas@fatrovonfranken.com.ar
             </a>
           </div>
-        </div>
-
-        <div className="footer-media">
-          <p>SIGUENOS</p>
-          <a
-            href="https://www.instagram.com/fatrovonfranken_pets/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={Instagram} alt="Instagram Logo" />
-          </a>
-
-          <a
-            href="https://www.facebook.com/FatroVonFranken"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={Facebook} alt="Facebook Logo" />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/company/fatro-von-franken"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={Linkedin} alt="LinkedIn Logo" />
-          </a>
         </div>
 
         <div className="footer-end">

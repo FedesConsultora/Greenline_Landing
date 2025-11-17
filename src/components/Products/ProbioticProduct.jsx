@@ -1,13 +1,13 @@
 import { useState } from "react";
 import GreenlineProbioticsDouble from "../../assets/img//Green-Line-PROBIOTICS-DOUBLE.webp";
 import GreenlineProbiotics from "../../assets//img//Green Line PROBIOTICS 1.png";
-import Probiotics from "../../assets/img/Group-2.webp";
+import Probiotics from "../../assets/img//PROBIOTICS (1).webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";
+import Logo1 from "../../assets/img//pasta palatable.svg";
+import Logo2 from "../../assets/img//todas las edades.svg";
+import Logo3 from "../../assets/img//balance digestivo.svg";
+import Logo4 from "../../assets/img//sistema inmune.svg";
 import ScrollStrip from "../common/ScrollStrip";
-import Logo1 from "../../assets/img/Logopro1.webp";
-import Logo2 from "../../assets/img//LogoPro2.webp";
-import Logo3 from "../../assets/img//logoPro3.webp";
-import Logo4 from "../../assets/img//logoPro4.webp";
 import "./_probioticProduct.scss";
 
 export default function ProbioticProduct({ id }) {
@@ -81,7 +81,13 @@ export default function ProbioticProduct({ id }) {
             src={GreenlineProbioticsDouble}
             alt="GreenLine Probiotics Double"
           />
-          <img src={Probiotics} alt="Packaging Probiotics" />
+
+          <img
+            className="packaging-img"
+            src={Probiotics}
+            alt="Packaging Probiotics"
+          />
+
           <h1>Lo que no ves, también importa</h1>
           <h2>
             La microbiota intestinal es un ecosistema vivo: millones de
@@ -109,7 +115,7 @@ export default function ProbioticProduct({ id }) {
             efectividad, específicas para la microbiota de perros y gatos.
           </h2>
 
-          <div>
+          <div className="probiotics-logos">
             <img src={Logo1} alt="" />
             <img src={Logo2} alt="" />
             <img src={Logo3} alt="" />

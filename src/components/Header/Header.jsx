@@ -89,7 +89,7 @@ export default function Header({ id }) {
 
           <nav className="nav-inline" aria-label="Navegación principal">
             {[
-              { id: "productos", label: "Quienes Somos" },
+              { id: "productos", label: "Que es GreenLine" },
               { id: "probiotics", label: "Probiotics" },
               { id: "repel", label: "Repel" },
               { id: "contacto", label: "Contacto" },
@@ -140,7 +140,7 @@ export default function Header({ id }) {
           aria-label="Navegación principal"
         >
           {[
-            { id: "productos", label: "Quienes Somos" },
+            { id: "productos", label: "¿Qué es GreenLine?" },
             { id: "probiotics", label: "Probiotics" },
             { id: "repel", label: "Repel" },
             { id: "contacto", label: "Contacto" },

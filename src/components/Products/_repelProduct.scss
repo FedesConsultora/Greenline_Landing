@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  gap: 20px;
+  gap: 10px;
 
   .repel-divider {
     background: linear-gradient(#ff8040 100%, #0000 100%);
@@ -34,12 +34,16 @@
     max-width: 300px;
     height: auto;
   }
+  .logo-repel {
+    max-width: 200px !important;
+    margin-bottom: 1rem;
+  }
 
   h1 {
     max-width: 300px;
     font-size: 2rem;
     color: #ff8040;
-    margin: 10px 0;
+    margin: 2rem 0 0rem;
   }
 
   h2 {
@@ -64,11 +68,23 @@
     justify-content: center;
     padding-top: 1rem;
 
+    .repel-logos {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 500px;
+      max-height: 160px;
+
+      .logo2 {
+        transform: scale(0.9);
+      }
+    }
     div {
       display: flex;
       flex-direction: row;
       gap: 1rem;
-      padding: 1.5rem;
     }
   }
   .repel-dynamic-section h1 p {
@@ -176,7 +192,7 @@
     width: 100%;
     button {
       flex: 1 1 124px;
-      min-width: 130px;
+      min-width: 136px;
       max-width: 150px;
       padding: 8px 10px;
       background-color: #2d6bc8;

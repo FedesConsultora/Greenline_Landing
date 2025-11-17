@@ -2,7 +2,7 @@
   display: flex;
   height: 50vh;
   width: 100%;
-  background-image: url("../../assets//img/footer.webp");
+  background-image: url("../../assets//img//FooterMobile.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -24,6 +24,7 @@
     align-items: center;
 
     .footer-top {
+      /* Estilos para H1, H3 en móvil */
       h1 {
         font-size: 3rem;
         color: #fff;
@@ -77,10 +78,11 @@
       justify-content: center;
       align-content: center;
       text-align: center;
+      align-self: center;
       gap: 1rem;
       max-height: 30px;
       padding: 0rem 1rem;
-      margin: 1rem 1rem 1rem 6rem;
+      margin: 1rem 10rem 1rem 10rem;
 
       max-width: 200px;
       img {
@@ -119,5 +121,80 @@
         color: #669701;
       }
     }
+  }
+}
+
+/* --- Media Queries --- */
+@media (min-width: 720px) {
+  .footer {
+    display: flex;
+    height: 70vh;
+    max-height: none;
+    background-image: url("../../assets//img//FooterDesktop.png");
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    position: relative;
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+    aspect-ratio: 15/11;
+    background-size: cover;
+    background-position: center top;
+    max-height: none;
+    background-image: url("../../assets//img//FooterDesktop.png");
+    background-attachment: scroll;
+    padding: 0;
+  }
+
+  /* Columna Izquierda (footer-top) */
+  .footer-content {
+    max-width: 1200px; /* Aumenta el ancho para dar espacio */
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem 2rem; /* Padding horizontal y vertical */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; /* CLAVE: Separa los dos hijos (columnas) */
+    text-align: left;
+    .footer-main-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem; // opcional, para separar columnas
+
+      .footer-left-column {
+        flex: 1; // ocupa la mitad izquierda
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+
+        h1 {
+          align-self: flex-start;
+
+          font-size: 4rem; // opcional, más grande en desktop
+        }
+      }
+
+      .footer-right-column {
+        flex: 1; // ocupa la mitad derecha
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem; // espacio entre secciones
+      }
+    }
+  }
+
+  .footer-end {
+    text-align: center; // fila inferior sigue centrada
   }
 }

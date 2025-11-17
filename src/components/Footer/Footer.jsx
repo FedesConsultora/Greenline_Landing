@@ -5,13 +5,13 @@ import { IoMailOutline } from "react-icons/io5";
 import Facebook from "../../assets//img/fb-footer.png";
 import Instagram from "../../assets//img//ig-footer.webp";
 import Linkedin from "../../assets//img/li-footer.webp";
-import VFLogo from "../../assets/img/Group-_6_.webp";
+import VFLogo from "../../assets/img/logoFvf.webp";
 import "../Footer/_footer.scss";
 
 export default function Footer({ id }) {
   return (
-    <footer class="footer" id={id}>
-      <div class="footer-content">
+    <footer className="footer" id={id}>
+      <div className="footer-content">
         <div className="footer-top">
           <h1>
             Amarlos es <br /> <strong>cuidarlos</strong>
@@ -61,7 +61,7 @@ export default function Footer({ id }) {
           </div>
         </div>
 
-        <div class="footer-links">
+        <div className="footer-links">
           <div>
             {" "}
             <MdOutlinePhone
@@ -124,11 +124,17 @@ export default function Footer({ id }) {
           <p>
             {" "}
             <strong>GreenLine by </strong>{" "}
-            <img
-              style={{ paddingLeft: "0.5rem", top: "2rem" }}
-              src={VFLogo}
-              alt="Von Franken"
-            />
+            <a 
+              href="https://www.fatrovonfranken.com/productos/animales-de-compania/"
+            >
+              <img
+                style={{ paddingLeft: "0.5rem", top: "2rem", width: '70px', cursor:'pointer' }}
+                src={VFLogo}
+                
+                alt="Von Franken"
+              />
+            </a>
+            
           </p>
 
           <a

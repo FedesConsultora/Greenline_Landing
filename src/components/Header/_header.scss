@@ -144,6 +144,7 @@
   text-decoration: none;
   white-space: nowrap;
   margin-bottom: 0px;
+  margin-top: 0px;
 
   a .brand {
     padding-top: 2rem;
@@ -270,7 +271,6 @@
   .site-header {
     top: 16px;
     border: none;
-
     padding: 0;
   }
   .site-header__wrap {
@@ -278,10 +278,14 @@
     max-width: 190%;
     max-height: 90px;
     background-color: rgba(#ffff, 0.5);
-    border-radius: 1rem;
+    border-radius: 2rem;
     overflow: hidden;
     transition: border-radius 0.18s ease;
-  }
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
   .site-header__row {
     display: flex;
     align-items: center;
@@ -303,7 +307,6 @@
   .brand img {
     transform: scale(0.8);
     position: relative;
-    bottom: 8px;
     height: 58px;
     border: none;
   }
@@ -322,8 +325,8 @@
   }
   .site-header {
     background-color: transparent;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 8.4rem;
+    padding-right: 8.4rem;
   }
 }
 .nav-inline a,

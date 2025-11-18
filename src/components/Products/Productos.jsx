@@ -182,7 +182,6 @@ export default function Productos({ id }) {
         </div>
       </div>
 
-      {/* DER: FONDO VERDE + PERRITO */}
       <div className="introDesk__right">
         <img className="intro__dog" src={Perrito} alt="Perro GreenLine" />
       </div>
@@ -193,7 +192,6 @@ export default function Productos({ id }) {
     <section id={id} aria-labelledby="productos" ref={ref}>
       {isDesktop ? <IntroDesktop /> : <IntroMobile />}
 
-      {/* Cards (mismo JSX; invierto solo en desktop con CSS grid-areas) */}
       <div
         className={`productos__main ${
           isDesktop ? "productos__main--desktop" : ""
@@ -239,8 +237,8 @@ export default function Productos({ id }) {
       <div className="main-divider">
         <ScrollStrip
           text="Porque lo primero es PREVENIR, y eso también es cuidarlos."
-          speed={60}        // ajustás velocidad fácil
-          direction="left"  // derecha -> izquierda
+          speed={60}        
+          direction="left"  
         />
       </div>
     </section>

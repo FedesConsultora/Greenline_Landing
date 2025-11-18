@@ -1,3 +1,93 @@
+/* ========================= */
+/* NUEVO: HERO REPEL (arriba) */
+/* ========================= */
+
+.repel-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+
+  .repel-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin-bottom: 2rem;
+
+    .repel-logo {
+      max-width: 220px;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ff8040;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      color: #3c3c3b;
+      line-height: 1.5;
+      max-width: 320px;
+    }
+  }
+
+  .repel-hero__media {
+    display: flex;
+    justify-content: center;
+
+    .repel-products-img {
+      width: 100%;
+      max-width: 650px;
+      height: auto;
+    }
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .repel-hero {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6rem;
+    text-align: left;
+
+    .repel-hero__copy {
+      flex: 0 0 40%;
+      align-items: flex-start;
+      text-align: left;
+
+      .hero-title {
+        font-size: 2.6rem;
+        max-width: 420px;
+      }
+
+      .hero-text {
+        max-width: 420px;
+      }
+    }
+
+    .repel-hero__media {
+      flex: 0 0 45%;
+      justify-content: flex-end;
+
+      .repel-products-img {
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+/* ================================= */
+/* A PARTIR DE ACÁ TU CSS SIN TOCAR */
+/* ================================= */
+
 /* _product-detail.scss */
 
 .repel__main {
@@ -34,6 +124,7 @@
     max-width: 300px;
     height: auto;
   }
+
   .logo-repel {
     max-width: 200px !important;
     margin-bottom: 1rem;
@@ -43,7 +134,8 @@
     max-width: 300px;
     font-size: 2rem;
     color: #ff8040;
-    margin: 2rem 0 0rem;
+    margin: 0.3rem 0 0rem;
+
   }
 
   h2 {
@@ -53,6 +145,7 @@
     color: #3c3c3b;
     line-height: 1.2;
   }
+
   h3 {
     max-width: 300px;
     font-size: 1.2rem;
@@ -78,25 +171,34 @@
       max-height: 160px;
 
       .logo2 {
-        transform: scale(0.9);
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
       }
     }
+
     div {
       display: flex;
       flex-direction: row;
       gap: 1rem;
     }
   }
+  .repel-dynamic-section{
+    max-width: 600px !important;
+  }
   .repel-dynamic-section h1 p {
-    display: inline; // para que todo quede en línea
+    display: inline;
     font-weight: 400;
   }
 
   .repel-dynamic-section h1 strong {
     text-transform: capitalize;
-    font-weight: 700; // negrita
-    color: inherit; // mantiene color del h1
+    font-weight: 700;
+    color: inherit;
   }
+
   .repel-dynamic-section {
     display: flex;
     flex-direction: column;
@@ -115,6 +217,7 @@
 
     ul {
       list-style-type: none;
+
       li {
         display: flex;
         text-align: start;
@@ -125,6 +228,7 @@
       }
     }
   }
+
   .repel-dynamic-section ul {
     list-style: none;
     padding: 0;
@@ -132,12 +236,12 @@
 
   .repel-dynamic-section .ventajas-repel ul {
     display: flex;
-    flex-direction: column; /* columna en lugar de fila */
-    gap: 0.8rem; /* espacio entre los items */
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   .repel-dynamic-section .ventajas-repel ul li {
-    display: block; /* cada item en su propia línea */
+    display: block;
   }
 
   .repel-dynamic-section ul {
@@ -148,6 +252,7 @@
     line-height: 1.5;
     color: #4c4c4c;
   }
+
   .repel-dynamic-section ul li .text {
     display: block;
     flex: 1;
@@ -185,11 +290,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem 1.5rem;
-    max-width: 500px;
     padding: 1rem 2rem;
-    margin: 0rem 2rem;
+    margin: 0rem 0rem;
     align-items: center;
     width: 100%;
+
     button {
       flex: 1 1 124px;
       min-width: 136px;
@@ -206,16 +311,15 @@
 
       &.active {
         background-color: #ff8040;
-        transition: none;
       }
 
       &.inactive {
         background-color: #8895a3;
-        transition: none;
       }
     }
   }
 }
+
 @media (min-width: 300px) and (max-width: 560px) {
   .prod-buttons {
     display: flex;
@@ -231,42 +335,38 @@
     button:first-child {
       width: 100%;
       flex-basis: 100% !important;
-      order: 0;
     }
 
     button:nth-child(n + 2) {
       flex-basis: 45% !important;
-      order: 1;
     }
   }
 }
+
 @media (max-width: 400px) {
   .repel-dynamic-section {
-    padding: 2rem; // menos padding para que entre en pantalla
-    margin: 0 2rem 2rem 2rem !important; // ajustar márgenes
-    width: calc(100% - 2rem); // que ocupe todo el ancho disponible
-    box-sizing: border-box; // para que padding no sume al ancho
+    padding: 2rem;
+    margin: 0 2rem 2rem 2rem !important;
+    
+    box-sizing: border-box;
   }
 
   .repel-dynamic-section h1 {
-    font-size: 1.5rem; // ajustar título
-  }
-  .repel-dynamic-section h2 {
-    font-size: 1.3rem; // ajustar título
+    font-size: 1.5rem;
   }
 
   .repel-dynamic-section ul {
-    gap: 1rem; // reducir separación entre items
-    flex-direction: column; // asegurar columna si era fila
+    gap: 1rem;
+    flex-direction: column;
   }
 
   .repel-dynamic-section ul li img {
-    width: 40px; // reducir tamaño de imágenes
+    width: 40px;
     height: 40px;
   }
+
   .repel-dynamic-section .presentaciones-img img {
     padding: 1rem 4rem 1rem 0rem;
-    position: relative;
   }
 }
 
@@ -276,5 +376,66 @@
   }
   100% {
     transform: translateX(-700px);
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .probiotics-logos{
+    max-width: 800px !important;
+  }
+  .repel-logo {
+    position: relative;
+    right: 1rem;
+  }
+  .repel-products-img{
+    position: relative;
+    left: 2rem;
+  }
+  .articleInfo{
+    display: flex !important;
+    width: 100%;
+  }
+  .repel-info{
+    width: 50%;
+    justify-content: start !important;
+    padding-top: 1.2rem !important;
+    padding-left: 8.6rem;
+    h3{
+      width: 100% !important;
+      max-width: none;
+      text-align: left;
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+    h2{
+      width: 100% !important;
+      max-width: none;
+      text-align: left;
+    }
+    h1{
+      width: 100% !important;
+      max-width: none;
+      text-align: left;
+      font-size: 2.7rem;
+    }
+    
+  }
+  .repel-logos{
+    width: 100% !important;
+    padding-left: 0rem !important;
+    align-items: start;
+    img{
+      max-width: 125px;
+    }
+    .logo2 {
+      position: relative;
+      bottom: 0.6rem;
+      transform: scale(0.88) !important;
+      -webkit-transform: scale(0.88) !important;
+      -moz-transform: scale(0.88) !important;
+      -ms-transform: scale(0.88) !important;
+      -o-transform: scale(0.88) !important;
+    }
   }
 }

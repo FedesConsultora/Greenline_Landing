@@ -1,44 +1,58 @@
-/* _product-detail.scss */
+/* src/components/ProbioticProduct/_probioticProduct.scss */
 
 .probiotics__main {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: start;
   gap: 20px;
   padding: 0;
 
+  /* ======================== HERO ======================== */
   .probiotics-presentation {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 2rem !important;
-    .desktop-img {
-      display: block;
-      padding: 2rem;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 
-    .mobile-img {
-      display: none;
-    }
-
-    .packaging-img {
+    &__media {
+      width: 100%;
       display: flex;
+      align-items: center;
       justify-content: center;
-      margin: 1rem 0rem 1rem;
-      max-width: 80%;
     }
 
-    @media (max-width: 768px) {
-      .desktop-img {
-        display: none;
-      }
-      .mobile-img {
-        display: block;
-        padding: 2rem;
-      }
+    &__copy {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 32rem;
+    }
+
+    /* LOGO (desktop), oculto en mobile */
+    .desktop-img {
+      display: none;
+      margin-bottom: 1rem;
+      max-width: 260px;
+    }
+
+    /* HERO MOBILE */
+    .mobile-img {
+      display: block;
+      padding: 1rem 0 2rem 0;
+      width: 100%;
+      max-width: 220px;
+    }
+
+    /* ESCUDO — oculto en mobile */
+    .shield-img {
+      width: 100%;
+      display: block;
+      max-width: 600px;
     }
 
     h1 {
@@ -55,13 +69,88 @@
       line-height: 1.5;
       text-align: center;
     }
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #2d6bc8;
+
+    /* ======= MOBILE ONLY ======= */
+    @media (max-width: 1023px) {
+      .desktop-img {
+        display: none;
+      }
+      .shield-img-desktop{
+        display: none;
+      }
+      
+    }
+
+    /* ======= DESKTOP ======= */
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+
+      .probiotics-presentation__media{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .probiotics-presentation__copy{
+        max-width: 80%;
+        position: relative;
+        right: 2rem;
+      }
+      .shield-img-desktop {
+        display: block;
+        width: 80%;
+      }
+      .shield-img {
+        display: none !important;
+      }
+      .mobile-img {
+        display: none;
+      }
+
+      .desktop-img {
+        display: block;
+        width: 30%;
+      }
+
+      &__media {
+        flex: 0 0 55%;
+        justify-content: flex-end;
+      }
+
+      &__copy {
+        flex: 0 0 45%;
+        align-items: flex-start;
+        text-align: left;
+
+        h1,
+        h2 {
+          text-align: left;
+          padding: 0;
+        }
+
+        h1 {
+          font-size: 2.6rem;
+          margin-bottom: 1rem;
+        }
+
+        h2 {
+          font-size: 1.1rem;
+        }
+      }
+      
     }
   }
-
+  .sectionButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* ======================== INFO ======================== */
   .probiotics-info {
     display: flex;
     flex-direction: column;
@@ -72,15 +161,10 @@
     .probiotics-logos {
       display: flex;
       flex-direction: row;
-      gap: 0;
       width: 80%;
       gap: 1rem;
       max-width: 500px;
       max-height: 160px;
-
-      img {
-        gap: 0rem;
-      }
     }
 
     div {
@@ -96,6 +180,7 @@
       color: #2d6bc8;
       padding-top: 1rem;
     }
+
     h1 {
       font-size: 2rem;
       color: #2d6bc8;
@@ -103,8 +188,9 @@
       margin: 0;
       padding-bottom: 1.5rem;
     }
+
     h2 {
-      padding: 0rem 2rem 0rem 2rem;
+      padding: 0 2rem;
       font-size: 1.2rem;
       font-weight: 400;
       color: #3c3c3b;
@@ -112,13 +198,15 @@
       text-align: center;
     }
   }
+
+  /* ======================== SECCIÓN DINÁMICA ======================== */
   .probiotics-dynamic-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 2rem;
-    margin: 0rem 2rem 2rem 2rem;
+    margin: 0 2rem 2rem;
     border-radius: 2rem;
     background-color: #f6f5f5;
 
@@ -128,19 +216,10 @@
       font-weight: 400;
       color: #2d6bc8;
     }
-    .probiotics-dynamic-section h1 p {
-      display: inline;
-      font-weight: normal;
-    }
-
-    .probiotics-dynamic-section h1 strong {
-      font-weight: 700;
-      color: inherit;
-      text-transform: capitalize;
-    }
 
     ul {
       list-style-type: none;
+
       li {
         display: flex;
         text-align: start;
@@ -151,12 +230,14 @@
       }
     }
 
-    .probiotics-dynamic-section .como-funciona {
+    .como-funciona {
       display: flex;
       gap: 4rem;
       line-height: 2rem;
     }
   }
+
+  /* ======================== BUTTONS ======================== */
   .prod-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -164,9 +245,10 @@
     gap: 1rem 1rem;
     max-width: 500px;
     padding: 1rem 2rem;
-    margin: 0rem 2rem;
+    margin: 0 2rem;
     align-items: center;
     width: 100%;
+
     button {
       flex: 1 1 120px;
       min-width: 130px;
@@ -178,44 +260,43 @@
       border-radius: 1rem;
       cursor: pointer;
       font-weight: 400;
-      transition: background 0.3s;
       white-space: nowrap;
-
-      &.active {
-        background-color: #2d6bc8;
-        transition: none;
-      }
 
       &.inactive {
         background-color: #8895a3;
-        transition: none;
       }
     }
   }
 
+  /* ======================== DIVIDERS ======================== */
   .probiotics-divider {
     background: linear-gradient(#397dc9 100%, #0000 100%);
     background-size: cover;
     height: 80px;
     width: 100%;
-    max-width: 100%;
+    
 
-    div {
+    div{
       display: inline-block;
       white-space: nowrap;
       width: 200%;
+      display: flex;
       animation: moveLeft 15s linear infinite;
-
       h2 {
         font-size: 1.6rem;
         text-align: center;
         color: #fff;
-        margin: 1rem 0rem 0rem 0rem;
+        margin: 1rem 0 0;
       }
     }
+      
+
+      
+    
   }
+
   .divider-prod {
-    background-image: url("../../assets//img//eb51d7a5db312bf71af26d73652c6dc4a6e0d263.webp");
+    background-image: url("../../assets/img/eb51d7a5db312bf71af26d73652c6dc4a6e0d263.webp");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -223,21 +304,65 @@
     margin-bottom: 2.5rem;
 
     img {
-      width: 48%; // la imagen ahora se achica según el ancho del contenedor
+      width: 48%;
       max-width: 400px;
-      min-width: 100px;
       position: relative;
       top: 60px;
       left: 52%;
     }
   }
+}
 
-  @keyframes moveLeft {
-    0% {
-      transform: translateX(700px);
-    }
-    100% {
-      transform: translateX(-700px);
-    }
+@keyframes moveLeft {
+  0% {
+    transform: translateX(700px);
+  }
+  100% {
+    transform: translateX(-700px);
   }
 }
+ @media (min-width: 1024px) {
+    .probiotics__main{
+      .articleInfo{
+        display: flex;
+      }
+      .divider-prod {
+        min-height: 400px !important;
+        div{
+          position: relative;
+          top: 2rem !important;
+        }
+      }
+    }
+    .probiotics-info {
+      justify-content: start !important;
+      position: relative;
+      bottom: 1.8rem !important;
+      max-width: 600px;
+      text-align: left;
+      padding-left: 8.6rem;
+      h3{
+        width: 100%;
+        text-align: left;
+        font-size: 1.7rem !important;
+        font-weight: 400;
+      }
+      h1{
+        width: 100%;
+        text-align: left !important;
+        font-size: 2.7rem !important;
+      }
+      h2{
+        width: 100%;
+        padding-left: 0rem !important;
+        text-align: left !important;
+      }
+      .probiotics-logos{
+        width: 100% !important;
+        padding-left: 0rem !important;
+        position: relative;
+        right: 0.5rem !important;
+      }
+    }
+    
+ }

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import RepelLogo from "../../assets/img//repel-prod-logo.webp";
-import Repel from "../../assets/img//REPEL (1).webp";
-import Logo1 from "../../assets/img//extractos naturales.svg";
-import Logo2 from "../../assets/img//hogar seguro.svg";
-import Pino from "../../assets/img//aceite de pino.svg";
-import Eucalipto from "../../assets/img//aceite de eucalipto.svg";
-import Almendra from "../../assets/img//aceite de almendras.svg";
-import Neem from "../../assets/img//aceite de neem.svg";
+import RepelLogo from "../../assets/img/repel-prod-logo.webp";
+import Repel from "../../assets/img/REPEL (1).webp";
+import Logo1 from "../../assets/img/extractos naturales.svg";
+import Logo2 from "../../assets/img/hogar seguro.svg";
+import Pino from "../../assets/img/aceite de pino.svg";
+import Eucalipto from "../../assets/img/aceite de eucalipto.svg";
+import Almendra from "../../assets/img/aceite de almendras.svg";
+import Neem from "../../assets/img/aceite de neem.svg";
 import Presentaciones from "../../assets/img/presentaciones.webp";
 import "./_repelProduct.scss";
 import ScrollStrip from "../common/ScrollStrip";
@@ -56,6 +56,7 @@ export default function RepelProduct({ id }) {
         </>
       ),
     },
+
     ventajas: {
       title: "Por qué GreenLine Repel",
       content: (
@@ -87,7 +88,6 @@ export default function RepelProduct({ id }) {
           </li>
           <li>
             <div>
-              {" "}
               <img src={Pino} alt="" />
             </div>
             <p className="text">
@@ -97,7 +97,6 @@ export default function RepelProduct({ id }) {
           </li>
           <li>
             <div>
-              {" "}
               <img src={Neem} alt="" />
             </div>
             <p className="text">
@@ -124,13 +123,30 @@ export default function RepelProduct({ id }) {
   return (
     <section id={id}>
       <div className="repel__main">
-        <img src={RepelLogo} alt="GreenLine Repel" className="logo-repel" />
-        <img src={Repel} alt="Packaging Repel" />
-        <h1>Protección natural contra insectos molestos.</h1>
-        <h2>
-          Línea de repelentes con componentes naturales que mantienen alejados a
-          los insectos. Además, aportan brillo y suavidad al pelaje.
-        </h2>
+
+        {/* ====================== NUEVO HERO ====================== */}
+        <div className="repel-hero">
+          {/* Columna izquierda (logo + textos) */}
+          <div className="repel-hero__copy">
+            <img src={RepelLogo} alt="GreenLine Repel" className="repel-logo" />
+
+            <h1 className="hero-title">
+              Protección natural contra insectos molestos.
+            </h1>
+
+            <h2 className="hero-text">
+              Línea de repelentes con componentes naturales que mantienen
+              alejados a los insectos. Además, aportan brillo y suavidad al
+              pelaje.
+            </h2>
+          </div>
+
+          {/* Columna derecha (imagen productos) */}
+          <div className="repel-hero__media">
+            <img className="repel-products-img" src={Repel} alt="Packaging Repel" />
+          </div>
+        </div>
+        {/* ==================== FIN HERO ===================== */}
 
         <div className="repel-divider">
           <ScrollStrip
@@ -140,46 +156,51 @@ export default function RepelProduct({ id }) {
             as="h2"
           />
         </div>
+        <article className="articleInfo">
+          <div className="repel-info">
+            <h3>El complemento ideal y natural</h3>
+            <h1>para el tratamiento mensual antipulgas</h1>
+            <h2>
+              Su fórmula posee extractos y aceites vegetales, saludables para tu
+              mascota.
+            </h2>
 
-
-        <div className="repel-info">
-          <h3>El complemento ideal y natural</h3>
-          <h1>para el tratamiento mensual antipulgas</h1>
-          <h2>
-            Su fórmula posee extractos y aceites vegetales, saludables para tu
-            mascota.
-          </h2>
-          <div className="repel-logos">
-            <img src={Logo1} alt="" />
-            <img className="logo2" src={Logo2} alt="" />
+            <div className="repel-logos">
+              <img src={Logo1} alt="" />
+              <img className="logo2" src={Logo2} alt="" />
+            </div>
           </div>
+          <article>
+            <div className="prod-buttons">
+              {Object.keys(sections).map((key) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveSection(key)}
+                  className={activeSection === key ? "active" : "inactive"}
+                >
+                  {key.toUpperCase()}
+                </button>
+              ))}
+            </div>
+            <div className="repel-dynamic-section">
+              <h1>
+                {sections[activeSection].title.includes("GreenLine Repel") ? (
+                  <p>
+                    {sections[activeSection].title.split("GreenLine Repel")[0]}
+                    <strong>GreenLine Repel</strong>
+                    {sections[activeSection].title.split("GreenLine Repel")[1]}
+                  </p>
+                ) : (
+                  sections[activeSection].title
+                )}
+              </h1>
 
-          <div className="prod-buttons">
-            {Object.keys(sections).map((key) => (
-              <button
-                key={key}
-                onClick={() => setActiveSection(key)}
-                className={activeSection === key ? "active" : "inactive"}
-              >
-                {key.toUpperCase()}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="repel-dynamic-section">
-          <h1>
-            {sections[activeSection].title.includes("GreenLine Repel") ? (
-              <p>
-                {sections[activeSection].title.split("GreenLine Repel")[0]}
-                <strong>GreenLine Repel</strong>
-                {sections[activeSection].title.split("GreenLine Repel")[1]}
-              </p>
-            ) : (
-              sections[activeSection].title
-            )}
-          </h1>
-          {sections[activeSection].content}
-        </div>
+              {sections[activeSection].content}
+            </div>
+          </article>
+        </article>
+        
+        
       </div>
     </section>
   );

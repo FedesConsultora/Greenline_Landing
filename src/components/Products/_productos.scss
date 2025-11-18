@@ -258,6 +258,15 @@ $probiotics-bg: #3a77c8;
   filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.28));
 }
 
+.product-image-pr {
+  position: relative;
+  z-index: 10;
+  width: clamp(100px, 40vw, 600px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.28));
+}
+
 /* Título superpuesto */
 .product-title {
   position: absolute;
@@ -312,7 +321,7 @@ $probiotics-bg: #3a77c8;
 
 @media (min-width: 1024px) {
   .product-card {
-    min-height: 70svh;
+    min-height: 50svh !important;
   }
 }
 
@@ -533,7 +542,7 @@ $probiotics-bg: #3a77c8;
   .productos__intro--desktop {
     display: grid;
     grid-template-columns: 1fr 1fr; /* izq | der */
-    min-height: var(--rowH);
+
     max-height: 900px;
   }
   .productos__intro--desktop .intro__copy {
@@ -569,7 +578,7 @@ $probiotics-bg: #3a77c8;
     position: relative;
     background: url("../../assets/img/fondoVerdeDesktop.webp") center/cover
       no-repeat;
-    min-height: var(--rowH);
+
     position: relative;
     top: 5px;
   }
@@ -589,23 +598,33 @@ $probiotics-bg: #3a77c8;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "repel probiotics";
-    min-height: var(--rowH);
+    max-height: 380px;
   }
   .productos__main--desktop .card--repel {
     grid-area: repel;
+    max-height: 380px;
   }
   .productos__main--desktop .card--probiotics {
     grid-area: probiotics;
+    max-height: 380px;
   }
 
   /* igualamos alturas para que top e bottom “pesen” lo mismo */
   .product-card {
-    min-height: var(--rowH);
+    max-height: 360px;
   }
   .product-asset {
-    width: 60%;
+    width: 48%;
     .product-image {
       width: 100%;
+      position: relative;
+    }
+
+    .product-image-pr {
+      width: 100%;
+      position: relative;
+      left: 6rem;
+      top: 16px;
     }
   }
   .card--repel {
@@ -615,31 +634,37 @@ $probiotics-bg: #3a77c8;
         left: 190px;
         .brand {
           position: relative;
-          left: 5px;
+          font-size: 3rem;
+          left: 10px;
+          bottom: 30px;
         }
-      }
-    }
-  }
-  .card--repel {
-    .product-asset {
-      .product-title {
-        right: auto;
-        left: 190px;
-        .brand {
+
+        .name {
           position: relative;
-          left: 5px;
+          left: 10px;
+          bottom: 30px;
+          font-size: 4rem;
         }
       }
     }
   }
+
   .card--probiotics {
     .product-asset {
       .product-title {
         right: auto;
         left: -75px;
         .brand {
+          font-size: 3rem;
           position: relative;
-          left: 2px;
+          right: 60px;
+          bottom: 16px;
+        }
+        .name {
+          position: relative;
+          font-size: 4rem;
+          right: 60px;
+          bottom: 16px;
         }
       }
     }

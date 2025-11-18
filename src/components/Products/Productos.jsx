@@ -212,7 +212,7 @@ export default function Productos({ id }) {
               <span className="name">PROBIOTICS</span>
             </div>
             <img
-              className="product-image"
+              className="product-image-pr"
               src={ProbioticsImg}
               alt="GreenLine Probiotics"
             />

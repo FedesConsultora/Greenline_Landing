@@ -1,78 +1,6 @@
 // @use "../../styles/variables" as t;
 
-// header {
-//   position: relative;
-//   width: 100%;
-// }
 
-// .navbar {
-//   position: fixed;
-
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   max-width: 100%;
-//   height: 74px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   padding: 1rem 1rem 1rem 2rem;
-//   background: rgba(255, 255, 255, 0.2);
-//   backdrop-filter: blur(10px); //eliminar cuando se scrollea hacia abajo
-//   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-//   z-index: 2000;
-//   transition: transform 0.45s ease-in-out, opacity 0.25s ease;
-//   will-change: transform, opacity;
-
-//   img {
-//     height: 42px;
-//     object-fit: contain;
-//     cursor: pointer;
-//   }
-
-//   &.navbar--hidden {
-//     transform: translateY(-100%);
-//     opacity: 0;
-//     pointer-events: none;
-//   }
-// }
-
-// .overlay {
-//   position: fixed;
-//   top: -100%;
-//   left: 0;
-//   width: 100vw;
-//   height: 100dvh;
-//   background: rgba(0, 0, 0, 0.93);
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   transition: top 0.4s ease-in-out;
-//   z-index: 999;
-
-//   &__menu {
-//     list-style: none;
-//     text-align: center;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 2rem;
-
-//     li a {
-//       color: #fff;
-//       font-size: 2rem;
-//       font-weight: 600;
-//       text-decoration: none;
-//       transition: color 0.3s;
-//       &:hover {
-//         color: #7ebc00;
-//       }
-//     }
-//   }
-
-//   &--active {
-//     top: 0;
-//   }
-// }
 
 .site-header {
   position: fixed;
@@ -132,7 +60,7 @@
   justify-content: center;
   height: 50px;
   display: block;
-  margin-top: 1.6rem;
+  margin: 0.5rem !important;
 }
 
 /* Inline navigation (desktop) */
@@ -279,13 +207,13 @@
     max-width: 190%;
     max-height: 90px;
     background-color: rgba(#ffff, 0.5);
-    border-radius: 2rem;
+    border-radius: 1.1rem;
     overflow: hidden;
     transition: border-radius 0.18s ease;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
+    -webkit-border-radius: 1.1rem;
+    -moz-border-radius: 1.1rem;
+    -ms-border-radius: 1.1rem;
+    -o-border-radius: 1.1rem;
 }
   .site-header__row {
     display: flex;
@@ -308,6 +236,7 @@
   .brand img {
     transform: scale(0.8);
     position: relative;
+    bottom: 3px;
     height: 58px;
     border: none;
   }
@@ -334,6 +263,9 @@
 .nav-collapsible a {
   transition: color 0.25s ease, text-shadow 0.25s ease;
   color: #6c6c6c;
+  position: relative;
+  top: 0.55rem;
+  font-size: 1.4rem;
 }
 .nav-inline a.is-active,
 .nav-collapsible a.is-active {

@@ -13,6 +13,7 @@
   position: relative;
   justify-content: flex-end;
   overflow: hidden;
+  border: none;
 
   .footer-content {
     position: relative;
@@ -24,7 +25,7 @@
     justify-content: flex-end;
     align-items: center;
     white-space: wrap;
-
+    
     .footer-top {
       /* Estilos para H1, H3 en móvil */
       h1 {
@@ -129,6 +130,22 @@
   }
 }
 
+@media (min-width: 430px) and ( max-width: 599px){
+.footer {
+  position: relative;
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+    aspect-ratio: 6/2;
+    background-size: cover;
+    background-position: center top;
+    max-height: none;
+    background-image: url("../../assets//img/FooterMobile.png");
+    background-attachment: scroll;
+    padding: 0;
+}
+}
+ 
 /* --- Media Queries --- */
 @media (min-width: 600px) {
   .footer {
@@ -239,8 +256,8 @@
     background-image: url("../../assets//img//FooterDesktop.png");
     background-attachment: scroll;
     padding: 0;
+    margin-top: -2rem;
   }
-
   /* Columna Izquierda (footer-top) */
   .footer-content {
     max-width: 1500px;

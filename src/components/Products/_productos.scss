@@ -64,6 +64,7 @@
     min-height: var(--copy-minh);
     padding-bottom: 10rem; /* para que no lo tape el perro */
     padding-top: 1rem;
+
     #productos__header {
       padding-top: 1rem;
       font-weight: 400;
@@ -201,7 +202,7 @@
     grid-auto-rows: minmax(66svh, auto);
   }
   .intro__art {
-    width: 100px !important;
+    width: 80px !important;
   }
 }
 
@@ -504,7 +505,7 @@ $probiotics-bg: #3a77c8;
   }
 }
 
-@media (min-width: 960px) and (max-width: 1440px) {
+@media (min-width: 960px) and (max-width: 1025px) {
   .productos__intro .intro__dog {
     bottom: -122px;
     transform: translate(-65%, -19px);
@@ -523,7 +524,7 @@ $probiotics-bg: #3a77c8;
   #productos__header {
     font-weight: 400;
     line-height: 1.15;
-    font-size: clamp(22px, 5.2vw, 30px);
+    font-size: 2rem;
     color: t.$color-primary;
     text-align: left;
   }
@@ -541,21 +542,21 @@ $probiotics-bg: #3a77c8;
 
   .productos__intro--desktop {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* izq | der */
-
-    max-height: 900px;
+    grid-template-columns: 1fr 1fr; 
+    height: 600px;
+    
   }
   .productos__intro--desktop .intro__copy {
     width: 350px;
     padding-right: 0.5rem;
+    position: relative;
+    right: 10rem;
   }
   /* IZQ: huellas | texto */
   .productos__intro--desktop .introDesk__left {
-    display: grid;
-    grid-template-columns: minmax(110px, 220px) 1fr; /* huellas | texto */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: clamp(16px, 2.8vw, 24px);
-    padding: clamp(18px, 4vw, 36px);
     background: linear-gradient(
       180deg,
       #fff 0 60%,
@@ -566,7 +567,7 @@ $probiotics-bg: #3a77c8;
   }
 
   .productos__intro--desktop .paw-video {
-    width: min(18vw, 220px);
+    height: fit-content;
     opacity: 0.13;
     mix-blend-mode: multiply;
     filter: brightness(0.9) contrast(1.2) saturate(0.9);
@@ -580,19 +581,23 @@ $probiotics-bg: #3a77c8;
       no-repeat;
 
     position: relative;
-    top: 5px;
+    top: 1px;
   }
   .productos__intro--desktop .intro__dog {
-    position: absolute;
+    position: relative;
     left: 50%;
-    bottom: -77px; /* patitas sobre la línea inferior */
+    bottom: -263px !important;
     transform: translateX(-50%);
-    width: min(44vw, 600px);
+    width: 500px;
     z-index: 100000;
     height: auto;
     pointer-events: none;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
   }
-
+  
   /* Fila inferior: invertimos (naranja izquierda, azul derecha) */
   .productos__main--desktop {
     display: grid;
@@ -670,3 +675,4 @@ $probiotics-bg: #3a77c8;
     }
   }
 }
+

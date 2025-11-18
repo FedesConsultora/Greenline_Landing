@@ -29,7 +29,7 @@ export default function ProbioticProduct({ id }) {
     },
     beneficios: {
       label: "BENEFICIOS",
-      title: "Beneficios de GreenLine PROBIOTICS todos los días",
+      title: "Beneficios de GreenLine PROBIOTICS",
       content: (
         <ul>
           <li>• Aumenta absorción de nutrientes</li>

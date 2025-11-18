@@ -232,8 +232,10 @@
 
     .como-funciona {
       display: flex;
-      gap: 4rem;
-      line-height: 2rem;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: fit-content;
+      
     }
   }
 
@@ -289,10 +291,6 @@
         margin: 1rem 0 0;
       }
     }
-      
-
-      
-    
   }
 
   .divider-prod {
@@ -364,5 +362,10 @@
         right: 0.5rem !important;
       }
     }
-    
+    .probiotics-dynamic-section{
+      h1{
+          font-size: 2rem !important;
+      }
+      
+    }
  }

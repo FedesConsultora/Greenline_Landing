@@ -261,6 +261,7 @@
 
   .repel-dynamic-section .presentaciones-img {
     padding: 2rem;
+    align-self: center;
   }
 
   .repel-dynamic-section strong {
@@ -395,6 +396,8 @@
   .articleInfo{
     display: flex !important;
     width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .repel-info{
     width: 50%;

@@ -1,6 +1,6 @@
 // src/components/ProbioticProduct/ProbioticProduct.jsx
 import { useState } from "react";
-import GreenlineProbioticsDouble from "../../assets/img/Green-Line-PROBIOTICS-DOUBLE.webp";
+import GreenlineProbioticsDouble from "../../assets/img/ProbioticsLogo.webp";
 import GreenlineProbiotics from "../../assets/img/Green Line PROBIOTICS 1.png";
 import ProbioticsShield from "../../assets/img/PROBIOTICS (1).webp";
 import GreenLine from "../../assets/img/GreenLine 1 (2).png";

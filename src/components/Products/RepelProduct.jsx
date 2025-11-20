@@ -16,7 +16,7 @@ export default function RepelProduct({ id }) {
 
   const sections = {
     presentaciones: {
-      title: "Presentaciones GreenLine Repel",
+      title: "Presentaciones GreenLine REPEL",
       content: (
         <>
           <div className="presentaciones-img">
@@ -58,7 +58,7 @@ export default function RepelProduct({ id }) {
     },
 
     ventajas: {
-      title: "Por qué GreenLine Repel",
+      title: "Por qué GreenLine REPEL",
       content: (
         <div className="ventajas-repel">
           <ul>
@@ -72,9 +72,8 @@ export default function RepelProduct({ id }) {
         </div>
       ),
     },
-
     ingredientes: {
-      title: "Qué contiene GreenLine Repel",
+      title: "Qué contiene GreenLine REPEL",
       content: (
         <ul style={{ display: "flex", flexDirection: "column" }}>
           <li>

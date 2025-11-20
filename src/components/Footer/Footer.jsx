@@ -155,7 +155,7 @@ export default function Footer({ id }) {
             rel="noreferrer"
             target="_blank"
           >
-            Copyright © Fatro Von Franken - Desarrollado por{" "}
+            Copyright © Fatro Von Franken <br/> Desarrollado por{" "}
             <a
               style={{ color: "#5a8308ff" }}
               href="https://www.fedesagency.com/"
